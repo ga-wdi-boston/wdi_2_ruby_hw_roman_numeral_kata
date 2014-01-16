@@ -11,5 +11,12 @@ describe Fixnum do
 			expect(500.to_roman).to eq 'd'
 			expect(1500.to_roman).to eq 'md'
 		end
+
+		it 'adds "c" to roman number value for multiples of 100' do
+			expect(100.to_roman).to eq 'c'
+			expect(1700.to_roman).to eq 'mdcc'
+		end
+
+
 	end
 end

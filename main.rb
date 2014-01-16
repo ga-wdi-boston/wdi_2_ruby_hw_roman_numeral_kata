@@ -11,8 +11,13 @@ class Fixnum
 			roman += 'd' * (num / 500)
 			num = num % 500
 		end
+
+		if num / 100 > 0
+			roman += 'c' * (num / 100)
+			num = num % 100
+		end
 		roman
 	end
 end
 
-puts 20.to_roman
+puts 1700.to_roman
