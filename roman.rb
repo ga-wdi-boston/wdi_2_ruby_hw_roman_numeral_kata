@@ -1,3 +1,3 @@
 def to_roman(num)
-	'i'
+	'I' * num
 end
