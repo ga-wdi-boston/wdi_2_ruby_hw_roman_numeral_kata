@@ -1,5 +1,5 @@
 require 'pry'
 
 def roman_numerals(number)
-	'I'
+	roman_string = 'I' * number
 end
