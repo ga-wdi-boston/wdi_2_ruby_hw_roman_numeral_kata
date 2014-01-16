@@ -31,6 +31,11 @@ class Fixnum
 				num = num - 10
 			end
 		end
+
+		if num / 5 > 0
+			roman += 'v'
+			num = num % 5
+		end
 		roman
 	end
 end
