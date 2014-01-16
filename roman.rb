@@ -1,7 +1,11 @@
 def to_roman(num)
-	if num == 4
-		'IV'
+	roman = []
+	if num == 5
+		roman << 'V'
+	elsif num == 4
+		roman << 'IV'
 	else
-		'I' * num
+		roman << ('I' * num)
 	end
+	roman.join
 end

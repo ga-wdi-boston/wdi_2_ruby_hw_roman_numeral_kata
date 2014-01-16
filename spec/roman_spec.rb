@@ -14,4 +14,7 @@ describe '#to_roman' do
 	it 'should return IV when passed 4' do
 		expect(to_roman(4)).to eq 'IV'
 	end
+	it 'should return V when passed 5' do
+		expect(to_roman(5)).to eq 'V'
+	end
 end
