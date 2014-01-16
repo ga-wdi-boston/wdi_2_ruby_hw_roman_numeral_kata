@@ -10,4 +10,8 @@ describe '#to_roman' do
 	it 'should return ii when passed 2' do
 		expect(to_roman(2)).to eq 'II'
 	end
+
+	it 'should return IV when passed 4' do
+		expect(to_roman(4)).to eq 'IV'
+	end
 end
