@@ -17,6 +17,10 @@ ROMAN_MAP = { 1 => "I",
 def to_roman(num)
 	if num == 1
 		return "I"
+	elsif num == 2
+		return "II"
+	elsif num == 3
+		return "III"
 	else
 		return "nope"
 	end
