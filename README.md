@@ -19,7 +19,7 @@ At the end of this exercise, you should have a git commit for every test, and ea
 
 ## BONUS STAGE - HARD MODE UNLOCKED
 
-Write a `RomanNum` class which will hold the above logic. It should have a `to_i` method that will return the number as an [Arabic Numeral](http://en.wikipedia.org/wiki/Arabic_numerals). So I should be able to do the following. 
+Write a `RomanNum` class which will hold the above logic. It should have a `to_i` method that will return the number as an [Arabic Numeral](http://en.wikipedia.org/wiki/Arabic_numerals). If I attempt to initialize a new RomanNum with an invalid string, it should raise an appropiate error. So I should be able to do the following. 
 
 ```ruby
 number = RomanNum.new("X")
@@ -34,3 +34,4 @@ number = 10
 roman_number_object = number.to_roman # Returns a RomanNum object with value of "X"
 puts roman_number_object # Prints "X" to the screen
 ```
+
