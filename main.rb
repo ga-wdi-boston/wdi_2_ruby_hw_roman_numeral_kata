@@ -16,9 +16,20 @@ class Fixnum
 			roman += 'c' * (num / 100)
 			num = num % 100
 		end
+
 		if num / 50 > 0
 			roman += 'l' * (num / 50)
 			num = num % 50
+		end
+
+		while num / 10 > 0
+			if num % 10 == 9 && num / 10 == 1
+				roman += 'i'
+				num = num - 9
+			else
+				roman += 'x'
+				num = num - 10
+			end
 		end
 		roman
 	end

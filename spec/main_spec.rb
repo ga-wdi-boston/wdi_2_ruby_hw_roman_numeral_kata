@@ -21,5 +21,11 @@ describe Fixnum do
 			expect(50.to_roman).to eq 'l'
 			expect(1750.to_roman).to eq 'mdccl'
 		end
+
+		it 'adds "x" to roman numeral value for multiples of 10' do
+			expect(30.to_roman).to eq 'xxx'
+			expect(29.to_roman).to eq 'xix'
+			expect(1760.to_roman).to eq 'mdcclx'
+		end
 	end
 end
