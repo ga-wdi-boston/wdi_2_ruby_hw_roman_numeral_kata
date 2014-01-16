@@ -17,4 +17,9 @@ require_relative '../number_conv'
 			expect(to_roman(0)).to eq "nope"
 		end
 
+		it "takes numbers four and returns IV" do
+			expect(to_roman(4)).to eq "IV"
+			expect(to_roman(0)).to eq "nope"
+		end
+
 	end

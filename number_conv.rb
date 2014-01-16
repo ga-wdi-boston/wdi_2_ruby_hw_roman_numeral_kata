@@ -21,6 +21,8 @@ def to_roman(num)
 		return "II"
 	elsif num == 3
 		return "III"
+	elsif num == 4
+		return "IV"
 	else
 		return "nope"
 	end
