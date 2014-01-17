@@ -1,6 +1,7 @@
 require 'spec_helper'
 require_relative '../main'
 
+
 describe Fixnum do
 	describe '.to_roman' do
 		it 'adds "m" to roman numeral value for multiples of 1000' do
@@ -47,10 +48,4 @@ describe Fixnum do
 	end
 end
 
-describe '.to_arabic' do
-	it 'accepts a roman numeral string and outputs the corresponding arabic value' do
-		expect(to_arabic('mdcc')).to eq 1700
-		expect(to_arabic('mcd')).to eq 1400
-		expect(to_arabic('iv')).to eq 4
-	end
-end
+
