@@ -16,7 +16,21 @@ describe '#to_roman' do
     expect(to_roman(4)).to eq 'IV'
     expect(to_roman(5)).to eq 'V'
   end
+
+  it 'returns the correct roman numeral for int btwn 5 10' do
+    expect(to_roman(6)).to eq 'VI'
+    expect(to_roman(8)).to eq 'VIII'
+    # expect(to_roman(9)).to eq 'IX'
+    # expect(to_roman(10)).to eq 'X'
+  end
 end
+
+
+
+
+
+
+
 
 describe '#to_arabic' do
 
