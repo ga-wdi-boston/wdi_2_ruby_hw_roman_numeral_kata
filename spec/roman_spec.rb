@@ -4,12 +4,17 @@ require_relative '../lib/roman'
 describe '#to_roman' do
   it 'takes base integer (1) and returns a Roman numeral' do
     expect(to_roman (1)).to eq "I"
-
+  end
+  it 'takes base integer (5) and returns a Roman numeral' do
+    expect(to_roman (5)).to eq "V"
   end
 
   it 'tests addition of Roman numerals when input integer is not part of the exception' do
     expect(to_roman(2)).to eq "II"
     expect(to_roman(3)).to eq "III"
+  end
+  it 'tests when input integer is 4' do
+    expect(to_roman(4)).to eq "IV"
   end
 end
 
