@@ -1,6 +1,6 @@
 def to_roman(number)
-  if number == 1
-    'I'
+  if number < 4
+    'I' * number
   elsif number == 5
     'V'
   else
