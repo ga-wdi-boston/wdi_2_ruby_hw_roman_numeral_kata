@@ -3,19 +3,19 @@ class Fixnum
   def to_roman
     int = self
     romans = {
-      1000 => 'M',
-      900 => 'CM',
-      500 => 'D',
-      400 => 'CD',
-      100 => 'C',
-      90 => 'XC',
-      50 => 'L',
-      40 => 'XL',
-      10 => 'X',
-      9 => 'IX',
-      5 => 'V',
-      4 => 'IV',
-      1 => 'I'
+      1000  => 'M',
+      900   => 'CM',
+      500   => 'D',
+      400   => 'CD',
+      100   => 'C',
+      90    => 'XC',
+      50    => 'L',
+      40    => 'XL',
+      10    => 'X',
+      9     => 'IX',
+      5     => 'V',
+      4     => 'IV',
+      1     => 'I'
     }
 
     roman_string = ''
@@ -42,29 +42,28 @@ class RomanNum
 
   def to_i
     romans = {
-      'CM' => 900,
-      'M' => 1000,
-      'CD' => 400,
-      'D' => 500,
-      'XC' => 90,
-      'C' => 100,
-      'XL' => 40,
-      'L' => 50,
-      'IX' => 9,
-      'X' => 10,
-      'IV' => 4,
-      'V' => 5,
-      'I' => 1
+      'M'   => 1000,
+      'CM'  => 900,
+      'D'   => 500,
+      'CD'  => 400,
+      'C'   => 100,
+      'XC'  => 90,
+      'L'   => 50,
+      'XL'  => 40,
+      'X'   => 10,
+      'IX'  => 9,
+      'V'   => 5,
+      'IV'  => 4,
+      'I'   => 1
     }
     arabic = 0
 
-    romans.each do |roman, int|
-      sym_array = @roman.scan(Regexp.new roman)
-      count = sym_array.count
-      count.times do
-        @roman.slice!(roman)
+    romans.each do |key, int|
+      while @roman.index(key) == 0
         arabic += int
+        @roman.slice!(key)
       end
+
     end
 
     ## raise an error if there is anything left in string
