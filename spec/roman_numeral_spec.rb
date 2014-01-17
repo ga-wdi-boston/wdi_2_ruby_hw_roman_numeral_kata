@@ -13,6 +13,10 @@ describe '#to_roman' do
 	it 'returns VII if you input 7' do
 		expect(to_roman(7)).to eq 'VII'
 	end
+
+	it 'returns IX if you input 7' do
+		expect(to_roman(9)).to eq 'IX'
+	end
 end
 
 

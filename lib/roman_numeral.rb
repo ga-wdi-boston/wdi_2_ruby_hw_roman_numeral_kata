@@ -17,6 +17,10 @@ def to_roman(int)
 			roman += 'I'
 			i += 1
 		end
+
+	elsif int == 9
+		roman = 'IX'
+			
 	end
 	roman
 end
