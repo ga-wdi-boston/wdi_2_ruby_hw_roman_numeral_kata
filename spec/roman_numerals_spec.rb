@@ -36,4 +36,9 @@ describe '#to_roman' do
   it 'returns the roman numeral string CLII when passed the integer 152' do
     expect(to_roman(152)).to eq 'CLII'
   end
+
+  it 'returns the correct roman numeral string for large integers' do
+    expect(to_roman(1543)).to eq 'MDXLIII'
+    expect(to_roman(1309)).to eq 'MCCCIX'
+  end
 end
