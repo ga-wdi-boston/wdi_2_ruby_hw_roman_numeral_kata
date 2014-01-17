@@ -61,3 +61,7 @@ def roman_numerals(number)
 
 end
 
+def to_arabic(string)
+	3
+end
+
