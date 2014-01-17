@@ -50,8 +50,17 @@ end
 
 describe '#to_arabic' do
 
-	it 'takes a string of a roman numeral and returns an array of characters' do
-		expect(to_arabic('III')).to eq ['I','I','I']
+	# it 'takes a string of a roman numeral and returns an array of characters' do
+	# 	expect(to_arabic('III')).to eq ['I','I','I']
+	# end
+
+	it 'evaluates the sum of the characters based on their roman value' do
+		expect(to_arabic('III')).to eq 3
+		expect(to_arabic('II')).to eq 2
+		expect(to_arabic('I')).to eq 1
+		expect(to_arabic('V')).to eq 5
+		expect(to_arabic('X')).to eq 10
+
 	end
 
 end

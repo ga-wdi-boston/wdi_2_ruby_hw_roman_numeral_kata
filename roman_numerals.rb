@@ -62,6 +62,15 @@ def roman_numerals(number)
 end
 
 def to_arabic(string)
-	roman_array = string.split(//)
+	input_array = string.split(//)
+	roman_values = {'I' => 1, 'V' => 5, 'X' => 10}
+
+	arabic_total = 0
+
+	input_array.each do |letter|
+		arabic_total += roman_values[letter]
+	end
+
+	arabic_total
 end
 
