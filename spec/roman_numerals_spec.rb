@@ -15,7 +15,10 @@ describe '#to_roman' do
 
 	it 'translates an integer of 2 digits (10-99) into roman numerals' do
 		expect(roman_numerals(10)).to eq 'X'
-
+		expect(roman_numerals(30)).to eq 'XXX'
+		expect(roman_numerals(40)).to eq 'XL'
+		expect(roman_numerals(80)).to eq 'LXXX'
+		expect(roman_numerals(90)).to eq 'XC'
 	end
 
 end

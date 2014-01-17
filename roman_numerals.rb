@@ -24,6 +24,12 @@ def roman_numerals(number)
 	#Evaluated tens place in roman
 	if tens_integer <= 3
 		tens_roman = 'X' * tens_integer
+	elsif tens_integer == 4
+		tens_roman = 'XL'
+	elsif tens_integer >= 5 && tens_integer < 9
+		tens_roman = 'L' + 'X' * (tens_integer % 5)
+	else
+		tens_roman = 'XC'
 	end
 
 	roman_string = tens_roman + ones_roman
