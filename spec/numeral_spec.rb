@@ -69,4 +69,11 @@ describe '#to_arabic' do
     expect(to_arabic("XXV")).to eq 25
     expect(to_arabic("XXXVIII")).to eq 38
   end
+  it "should return appropriate string of stuff that requires L" do
+    expect(to_arabic("XLII")).to eq 42
+    expect(to_arabic("LVIII")).to eq 58
+    expect(to_arabic("LXV")).to eq 65
+    expect(to_arabic("LXXIX")).to eq 79
+    expect(to_arabic("LXXXVIII")).to eq 88
+  end
 end
