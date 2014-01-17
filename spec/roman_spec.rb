@@ -50,4 +50,10 @@ describe '#to_roman' do
 		it 'will return "DCCCXC" if pass 890' do
 		expect(to_roman(890)).to eq 'DCCCXC'
 	end
+		it 'will return "MDCCC" if pass 1800' do
+		expect(to_roman(1800)).to eq 'MDCCC'
+	end
+	it 'will return "MCMLXII" if pass 1962' do
+		expect(to_roman(1962)).to eq 'MCMLXII'
+	end
 end

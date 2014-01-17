@@ -7,6 +7,10 @@ def to_roman(num)
 				while num >= 50
 					while num >= 100
 						while num >= 500
+							while num >= 1000
+								s = s + 'M'
+								num = num - 1000
+							end
 							if num == 0
 								return s
 							elsif num < 500
