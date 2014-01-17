@@ -2,6 +2,8 @@ require 'pry'
 
 def to_roman(int)
   conv = [
+          ["D", 500],
+          ["CD", 400],
           ["C", 100],
           ["XC", 90],
           ["L", 50],
@@ -21,3 +23,8 @@ def to_roman(int)
   end
   answer
 end
+
+# Notes for to_arabic
+# if string.sub!(/matchthing/, '')
+# add the arabic numerals (removes the other stuff)
+# do weird characters first, then regular ones

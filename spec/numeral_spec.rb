@@ -35,5 +35,11 @@ describe '#to_roman' do
     expect(to_roman(303)).to eq "CCCIII"
     expect(to_roman(399)).to eq "CCCXCIX"
   end
-  it "should return appropriate String of stuff that needs D (1-899)"
+  it "should return appropriate String of stuff that needs D (1-899)" do
+    expect(to_roman(400)).to eq "CD"
+    expect(to_roman(455)).to eq "CDLV"
+    expect(to_roman(500)).to eq "D"
+    expect(to_roman(675)).to eq "DCLXXV"
+    expect(to_roman(899)).to eq "DCCCXCIX"
+  end
 end
