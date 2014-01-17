@@ -20,4 +20,11 @@ describe '#to_roman' do
 		expect(to_roman(29)).to eq "XXIX"
 	end
 
+	it 'converts numbers from 30-80 to a roman numeral string' do
+		expect(to_roman(39)).to eq "XXXIX"
+		expect(to_roman(42)).to eq "XLII"
+		expect(to_roman(74)).to eq "LXXIV"
+		expect(to_roman(67)).to eq "LXVII"
+	end
+
 end
