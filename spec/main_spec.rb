@@ -46,3 +46,6 @@ describe Fixnum do
 		end
 	end
 end
+
+describe '.to_arabic' do
+	it 'accepts a string'
