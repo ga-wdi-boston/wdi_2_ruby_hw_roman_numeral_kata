@@ -2,8 +2,15 @@ class Fixnum
 
   def to_roman
     int = self
-    romans = {1000 => 'M', 500 => 'D', 100 => 'C', 50 => 'L', 10 => 'X',
-      5 => 'V', 1 => 'I'}
+    romans = {
+      1000 => 'M',
+      500 => 'D',
+      100 => 'C',
+      50 => 'L',
+      10 => 'X',
+      5 => 'V',
+      1 => 'I'
+    }
 
     #### Special Patterns ####
     num_string = int.to_s
@@ -86,7 +93,21 @@ class RomanNum
   end
 
   def to_i
-    romans = {'CM' => 900, 'M' => 1000, 'CD' => 400, 'D' => 500, 'XC' => 90, 'C' => 100, 'XL' => 40, 'L' => 50, 'IX' => 9, 'X' => 10, 'IV' => 4, 'V' => 5, 'I' => 1}
+    romans = {
+      'CM' => 900,
+      'M' => 1000,
+      'CD' => 400,
+      'D' => 500,
+      'XC' => 90,
+      'C' => 100,
+      'XL' => 40,
+      'L' => 50,
+      'IX' => 9,
+      'X' => 10,
+      'IV' => 4,
+      'V' => 5,
+      'I' => 1
+    }
     arabic = 0
 
     romans.each do |roman, int|
