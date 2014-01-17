@@ -55,6 +55,11 @@ require_relative '../number_conv'
 			expect(to_roman(500)).to eq "D"
 			expect(to_roman(515)).to eq "DXV"
 		end
+		it "takes numbers 900 and 1000 and converts " do
+			expect(to_roman(900)).to eq "CM"
+			expect(to_roman(1000)).to eq "M"
+			expect(to_roman(2010)).to eq "MMX"
+		end
 	end
 
 
