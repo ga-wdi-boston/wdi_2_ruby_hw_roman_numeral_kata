@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'pry'
 require_relative '../lib/roman_numeral'
 
 describe RomanNum do
@@ -67,7 +68,8 @@ describe RomanNum do
       expect(RomanNum.new(3494).to_arabic).to eq 3494
       expect(RomanNum.new(4999).to_arabic).to eq 4999
 
-      # expect(RomanNum.new(591).to_arabic).to eq 591
+      # binding.pry
+      expect(RomanNum.new(591).to_arabic).to eq 591
     end
   end
 end
