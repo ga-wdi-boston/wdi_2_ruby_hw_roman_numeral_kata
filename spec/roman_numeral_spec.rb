@@ -30,6 +30,10 @@ describe '#to_roman' do
 		expect(to_roman(250)).to eq 'CCL'
 	end
 
+	it 'returns DCCXXXVII if you input 737' do
+		expect(to_roman(737)).to eq 'DCCXXXVII'
+	end
+
 end
 
 

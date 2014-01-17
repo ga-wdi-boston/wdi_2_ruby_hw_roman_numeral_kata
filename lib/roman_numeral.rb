@@ -51,7 +51,19 @@ def to_roman(int)
 			i += 1
 		end
 		roman = roman + to_roman(rest)
+	
+	elsif int >= 500 && int <= 999
+		hundred_digit = (int - 500) /100
+		rest = int % 100
+		roman += 'D'
+		i = 1
+		while i <= hundred_digit
+			roman += 'C'
+			i += 1
+		end
+		roman = roman +to_roman(rest)
 	end
+		
 		
 	roman
 end
