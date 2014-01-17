@@ -78,12 +78,15 @@ end
 
 def to_arabic(string)
 	int = 0
-	if string.length <= 3
+	if string.length <= 3 && !(string.include?('V'))
 		i = string.length
 		while i >= 1
 			int += 1
 			i -= 1
 		end
+
+	elsif string == 'IV'
+		int = 4
 	end
 	int
 end
