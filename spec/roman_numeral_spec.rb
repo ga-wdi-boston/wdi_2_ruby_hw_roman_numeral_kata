@@ -37,6 +37,14 @@ describe '#to_roman' do
     expect(to_roman(91)).to eq 'XCI'
     expect(to_roman(101)).to eq 'CI'
   end
+
+  it 'returns the correct roman numeral for high int!!' do
+    expect(to_roman(424)).to eq 'CDXXIV'
+    expect(to_roman(591)).to eq 'DXCI'
+    expect(to_roman(909)).to eq 'CMIX'
+    expect(to_roman(3494)).to eq 'MMMCDXCIV'
+    expect(to_roman(4999)).to eq 'MMMMCMXCIX'
+  end
 end
 
 
