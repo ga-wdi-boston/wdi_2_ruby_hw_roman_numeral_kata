@@ -32,4 +32,13 @@ describe '#to_roman' do
 	it 'will return "XXXIV" if pass 34' do
 		expect(to_roman(34)).to eq 'XXXIV'
 	end
+	it 'will return "XLVII" if pass 47' do
+		expect(to_roman(47)).to eq 'XLVII'
+	end
+	it 'will return "LXXII" if pass 72' do
+		expect(to_roman(72)).to eq 'LXXII'
+	end
+	it 'will return "LXXXIX" if pass 89' do
+		expect(to_roman(89)).to eq 'LXXXIX'
+	end
 end

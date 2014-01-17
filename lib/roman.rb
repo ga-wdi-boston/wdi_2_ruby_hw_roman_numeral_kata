@@ -4,6 +4,19 @@ def to_roman(num)
 	while num > 0
 		while num >= 5
 			while num >= 10
+				while num >= 50
+					if num == 0
+					return s
+					elsif num < 50
+						break
+					elsif num >= 90
+						s = s + 'XC'
+						num = num - 90
+					break
+					end
+					s = s + 'L'
+					num = num - 50
+				end
 				if num == 0
 					return s
 				elsif num < 10
