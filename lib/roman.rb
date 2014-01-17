@@ -18,18 +18,26 @@ def to_roman(num)
             1000 => "M" }
 
   return roman[num] if roman.has_key?(num)
-
-  [[50, 45],[40, 35],[30, 25], [20, 15],[ 10, 1], [ 5, 1]].each do |key, difference|
+[[100, 1], [100, 10], [50, 10], [50, 45],[40, 35],[30, 25], [20, 15],[ 10, 1], [ 5, 1]].each do |key, difference|
     while num > key
       key2 = num.to_i - key.to_i
       return roman[key].to_s << roman[key2].to_s
     end
+  end
+end
+# very limited method.
 
-    # while num >= key - difference && num < key
-    #   key3 = difference.to_i
-    #   key4 = num.to_i + key3
-    #   return roman[key3].to_s << roman[key4].to_s
-    # end
+def to_arabic(roman_numeral)
+  roman_numeral.split('').collect do |symbol|
+    case symbol
+      when "I" then 1
+      when "V" then 5
+      when "X" then 10
+      when "L" then 50
+      when "C" then 100
+      when "D" then 500
+      when "M" then 1000
+    end
   end
 end
 

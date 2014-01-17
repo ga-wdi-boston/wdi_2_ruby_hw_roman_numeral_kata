@@ -21,7 +21,7 @@ describe '#to_roman' do
 
   it 'tests adding in Roman numeral format to produce non-base integers' do
     expect(to_roman(12)).to eq "XII"
-    expect(to_roman(31)).to eq "XXXI"
+    expect(to_roman(21)).to eq "XXI"
     expect(to_roman(70)).to eq "LXX"
   end
 
@@ -32,10 +32,13 @@ describe '#to_roman' do
   it 'tests subtracting Roman numeral format to produce fours and nines'do
     expect(to_roman(9)).to eq "IX"
     expect(to_roman(19)).to eq "XIX"
-
+    expect(to_roman(34)).to eq "XXXIV"
+    expect(to_roman(54)).to eq "LIV"
   end
 end
 
-# 1-5 = 4
-# 1-10 = 9
-# 8 - 3 + 5
+describe '#to_arabic' do
+  it 'takes base Roman numeral symbol (V) and convert them to Arabic number 5' do
+    expect(to_arabic('V')).to eq [5]
+  end
+end
