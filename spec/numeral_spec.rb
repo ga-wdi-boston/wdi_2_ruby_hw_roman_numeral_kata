@@ -62,33 +62,39 @@ describe '#to_arabic' do
     expect(to_arabic("VII")).to eq 7
     expect(to_arabic("VIII")).to eq 8
   end
-   it "should return appropriate ints of stuff that requires I through X (1-39)" do
+   it "should return appropriate ints of string that has I through X (1-39)" do
     expect(to_arabic("IX")).to eq 9
     expect(to_arabic("XII")).to eq 12
     expect(to_arabic("XVIII")).to eq 18
     expect(to_arabic("XXV")).to eq 25
     expect(to_arabic("XXXVIII")).to eq 38
   end
-  it "should return appropriate ints of stuff that requires L" do
+  it "should return appropriate ints of string that has L" do
     expect(to_arabic("XLII")).to eq 42
     expect(to_arabic("LVIII")).to eq 58
     expect(to_arabic("LXV")).to eq 65
     expect(to_arabic("LXXIX")).to eq 79
     expect(to_arabic("LXXXVIII")).to eq 88
   end
-  it "should return appropriate ints of stuff that needs C (1-399)" do
+  it "should return appropriate ints of string that has C (1-399)" do
     expect(to_arabic("XCII")).to eq 92
     expect(to_arabic("CXLV")).to eq 145
     expect(to_arabic("CCXCII")).to eq 292
     expect(to_arabic("CCCIII")).to eq 303
     expect(to_arabic("CCCXCIX")).to eq 399
   end
-  it "should return appropriate String of stuff that needs D (1-899)" do
+  it "should return appropriate ints of string that has D (1-899)" do
     expect(to_arabic("CD")).to eq 400
     expect(to_arabic("CDLV")).to eq 455
     expect(to_arabic("D")).to eq 500
     expect(to_arabic("DCLXXV")).to eq 675
     expect(to_arabic("DCCCXCIX")).to eq 899
+  end
+   it "should return appropriate ints of string that has M (1-3999)" do
+    expect(to_arabic("CM")).to eq 900
+    expect(to_arabic("ML")).to eq 1050
+    expect(to_arabic("MMCCCXXV")).to eq 2325
+    expect(to_arabic("MMMCMXCIX")).to eq 3999
   end
 end
 
