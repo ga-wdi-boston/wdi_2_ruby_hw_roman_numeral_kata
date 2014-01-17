@@ -22,4 +22,10 @@ describe '#to_roman' do
   it 'returns the roman numeral string IV when passed the integer 4' do
     expect(to_roman(4)).to eq 'IV'
   end
+
+  it 'returns the roman numberal strings VI, VII, and VIII when passed the integers, 6, 7, and 8' do
+    expect(to_roman(6)).to eq 'VI'
+    expect(to_roman(7)).to eq 'VII'
+    expect(to_roman(8)).to eq 'VIII'
+  end
 end
