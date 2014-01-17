@@ -42,10 +42,14 @@ end
 
 describe '#to_arabic' do
 	it 'raises an error if the argument is not a single string' do
-		expect(to_arabic("valid")).to eq "valid input!"
 		expect{ to_arabic(10) }.to raise_error "Please enter a single string!"
 	end
 
-	# it
+	it 'converts roman numerals that don\'t involve subtraction to arabic numbers' do
+		expect(to_arabic("X")).to eq 10
+		expect(to_arabic("MMDC")).to eq 2600
+		expect(to_arabic("DCCXVIII")).to eq 718
+		expect(to_arabic("LXVII")).to eq 67
+	end
 
 end

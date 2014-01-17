@@ -36,12 +36,42 @@ end
 
 def to_arabic(*string)
 	raise "Please enter a single string!" unless string.length == 1 && string[0].is_a?(String)
-	"valid input!"
+
+	# split input into an array of characters
+	@roman = string[0].split(//)
+
+	romans = {
+		1000 => "M",
+		900 => "CM",
+    500 => "D",
+    400 => "CD",
+    100 => "C",
+		90 => "XC",
+		50 => "L",
+		40 => "XL",
+		10 => "X",
+		9 => "IX",
+		5 => "V",
+		4 => "IV",
+		1 => "I"
+	}
+
+	integer_array = []
+
+	@roman.each do |numeral|
+		# find the value in the hash, print corresponding key
+		arabic_number = romans.key(numeral)
+		# append integer to array
+		integer_array << arabic_number
+	end
+
+	# now sum the whole array
+	integer = integer_array.inject(0) {|sum, i|  sum + i }
+	integer
+
 end
 
-# binding.pry
-
-
+binding.pry
 
 
 
