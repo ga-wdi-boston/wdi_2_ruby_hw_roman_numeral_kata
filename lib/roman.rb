@@ -2,7 +2,20 @@
 def to_roman(num)
 	s = ''
 	while num > 0
-		
+		while num >= 5
+			
+
+			if num == 9
+				s = s + 'IX'
+			return s
+			elsif num == 0
+			return s
+			elsif num < 5
+				break
+			end
+			s = s + 'V'
+			num = num - 5
+	  end
 
 		if num == 4
 			s = s +'IV'
