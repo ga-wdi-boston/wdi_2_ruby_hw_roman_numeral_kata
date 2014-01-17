@@ -64,31 +64,39 @@ require_relative '../number_conv'
 
 
 describe "#to_arabic(roman)" do
-		it "takes numbers I and returns 1" do
+		it "takes roman I and returns number 1" do
 			expect(to_arabic("I")).to eq 1
 		end
-		it "takes numbers II and returns 2" do
+		it "takes roman II and returns number 2" do
 			expect(to_arabic("II")).to eq 2
 		end
-		it "takes numbers III and returns 3" do
+		it "takes roman III and returns number 3" do
 			expect(to_arabic("III")).to eq 3
 		end
-		it "takes numbers IV and returns 4" do
+		it "takes roman IV and returns number 4" do
 			expect(to_arabic("IV")).to eq  4
 		end
-		it "takes numbers five and returns V" do
+		it "takes roman V and returns number 5" do
 			expect(to_arabic("V")).to eq 5
 		end
-		it "takes numbers six and returns VI" do
+		it "takes roman VI and returns number 6" do
 			expect(to_arabic("VI")).to eq 6
 		end
-		it "takes numbers seven and returns VII" do
+		it "takes roman numerals VII and returns number 7" do
 			expect(to_arabic("VII")).to eq 7
 		end
-		it "takes numbers eight and returns VIII" do
+		it "takes roman numerals VIII and returns number 8" do
 			expect(to_arabic("VIII")).to eq 8
 		end
-
+		it "takes roman numerals IX and returns number 9" do
+			expect(to_arabic("IX")).to eq 9
+		end
+		it "takes roman numerals X and returns number 10" do
+			expect(to_arabic("X")).to eq 10
+		end
+		it "takes roman number XX and returns number 20" do
+			expect(to_arabic("XX")).to eq 20
+		end
 end
 
 
