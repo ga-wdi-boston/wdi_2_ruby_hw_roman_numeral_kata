@@ -62,6 +62,6 @@ def roman_numerals(number)
 end
 
 def to_arabic(string)
-	3
+	roman_array = string.split(//)
 end
 

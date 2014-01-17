@@ -49,9 +49,11 @@ describe '#to_roman' do
 end
 
 describe '#to_arabic' do
-	it 'translates a string of roman numerals under 3 and returns an arabic number' do
-		expect(to_arabic('III')).to eq 3
+
+	it 'takes a string of a roman numeral and returns an array of characters' do
+		expect(to_arabic('III')).to eq ['I','I','I']
 	end
+
 end
 
 
