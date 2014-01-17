@@ -62,9 +62,17 @@ def to_roman(int)
 			i += 1
 		end
 		roman = roman +to_roman(rest)
+
+	elsif int >= 1000 && int <= 2000
+		thousand_digit = int / 1000
+		rest = int % 1000
+		i = 1
+		while i <= thousand_digit
+			roman += 'M'
+			i += 1
+		end
+		roman = roman + to_roman(rest)
 	end
-		
-		
 	roman
 end
 
