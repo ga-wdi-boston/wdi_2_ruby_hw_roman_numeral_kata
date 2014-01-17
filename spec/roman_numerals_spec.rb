@@ -28,4 +28,8 @@ describe '#to_roman' do
     expect(to_roman(7)).to eq 'VII'
     expect(to_roman(8)).to eq 'VIII'
   end
+
+  it 'returns the roman numeral string IX when passed the integer 9' do
+    expect(to_roman(9)).to eq 'IX'
+  end
 end

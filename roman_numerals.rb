@@ -7,6 +7,8 @@ def to_roman(number)
     'V'
   elsif (6..8).include?(number)
     'V' + ('I' * (number - 5))
+  elsif number == 9
+    'IX'
   elsif number == 10
     'X'
   end
