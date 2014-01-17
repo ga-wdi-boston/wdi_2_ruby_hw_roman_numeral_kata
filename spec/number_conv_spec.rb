@@ -33,4 +33,8 @@ require_relative '../number_conv'
 			expect(to_roman(7)).to eq "VII"
 			expect(to_roman(3)).to eq "III"
 		end
+		it "takes numbers eight and returns VIII" do
+			expect(to_roman(7)).to eq "VII"
+			expect(to_roman(3)).to eq "III"
+		end
 	end
