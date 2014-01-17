@@ -21,6 +21,15 @@ def to_roman(int)
 	elsif int == 9
 		roman = 'IX'
 			
+	elsif int >= 10 && int <=49
+		ten_digit = int / 10
+		rest = int % 10
+		i = 1
+		while i <= ten_digit
+			roman += 'X'
+			i += 1
+		end
+		roman = roman + to_roman(rest)
 	end
 	roman
 end

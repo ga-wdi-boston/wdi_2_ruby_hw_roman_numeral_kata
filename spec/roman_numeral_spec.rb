@@ -14,8 +14,12 @@ describe '#to_roman' do
 		expect(to_roman(7)).to eq 'VII'
 	end
 
-	it 'returns IX if you input 7' do
+	it 'returns IX if you input 9' do
 		expect(to_roman(9)).to eq 'IX'
+	end
+
+	it 'returns XXXVII if you input 37' do
+		expect(to_roman(28)).to eq 'XXXVII'
 	end
 end
 
