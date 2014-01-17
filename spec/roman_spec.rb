@@ -15,18 +15,24 @@ describe '#to_roman' do
     expect(to_roman(500)).to eq "D"
   end
 
-  # it 'tests that in Roman numeral format, V(5) plus III(3) equals VIII (8)' do
-  #   expect(to_roman(8)).to eq "VIII"
-  # end
+  it 'tests that in Roman numeral format, V(5) plus III(3) equals VIII (8)' do
+    expect(to_roman(8)).to eq "VIII"
+  end
 
-  # it 'tests adding in Roman numeral format to produce non-base integers' do
-  #   expect(to_roman(12)).to eq "XII"
-  #   expect(to_roman(31)).to eq "XXXI"
-  #   expect(to_roman(70)).to eq "LXX"
-  # end
+  it 'tests adding in Roman numeral format to produce non-base integers' do
+    expect(to_roman(12)).to eq "XII"
+    expect(to_roman(31)).to eq "XXXI"
+    expect(to_roman(70)).to eq "LXX"
+  end
 
   it 'tests that in Roman numeral format, I(1) minus V(5) equals IV(4)'do
     expect(to_roman(4)).to eq "IV"
+  end
+
+  it 'tests subtracting Roman numeral format to produce fours and nines'do
+    expect(to_roman(9)).to eq "IX"
+    expect(to_roman(19)).to eq "XIX"
+
   end
 end
 
