@@ -6,7 +6,8 @@ def to_roman(int)
 			roman += 'I'
 			i += 1
 		end
+	elsif int == 4
+		roman = 'IV'
 	end
-
 	roman
 end
