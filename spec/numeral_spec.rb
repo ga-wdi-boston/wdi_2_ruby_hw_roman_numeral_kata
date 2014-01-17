@@ -120,7 +120,12 @@ describe RomanNum do
   end
 end
 
-
-
-
-
+describe Fixnum do
+  describe '#to_roman' do
+    it 'returns a RomanNum instance when called' do
+      expect(5.to_roman.class).to eq RomanNum
+      expect(142.to_roman.to_i).to eq 142
+      expect(1050.to_roman.to_s).to eq "ML"
+    end
+  end
+end
