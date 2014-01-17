@@ -18,15 +18,15 @@ def toArabic(input)
 
 	}
 
-	numeral = 0
+	number = 0
 
-	for key, value in conversion
-		while input.index(key) == 0
-			numeral += value
-			input.slice!(key)
+	for roman, arabic in conversion
+		while input.index(roman) == 0
+			number += arabic
+			input.slice!(roman)
 		end
 	end
-	numeral
+	number
 
 # 	conversion.each do |input| index(key) == 0
 # 			numeral += value
