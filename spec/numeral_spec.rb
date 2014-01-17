@@ -1,5 +1,6 @@
 require 'spec_helper'
 require_relative '../numeral'
+require_relative '../roman_class'
 
 describe '#to_roman' do
   it "should return appropriate String of I's of when passed 1-3" do
@@ -97,6 +98,15 @@ describe '#to_arabic' do
     expect(to_arabic("MMMCMXCIX")).to eq 3999
   end
 end
+
+describe RomanNum do
+  describe '#initialize' do
+    it 'raises an error when passed an invalid string' do
+      expect {RomanNum.new("Prescott")}.to raise_error "Not a valid Roman numeral!"
+    end
+  end
+end
+
 
 
 

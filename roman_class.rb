@@ -1,32 +1,10 @@
-require 'pry'
-
-def to_roman(int)
-  conv = [
-          ["M", 1000],
-          ["CM", 900],
-          ["D", 500],
-          ["CD", 400],
-          ["C", 100],
-          ["XC", 90],
-          ["L", 50],
-          ["XL", 40],
-          ["X", 10],
-          ["IX", 9],
-          ["V", 5],
-          ["IV", 4],
-          ["I", 1],
-          ]
-  answer = ''
-  conv.each.each do |roman, arabic|
-    while int >= arabic
-      answer += roman
-      int    -= arabic
-    end
+class RomanNum
+  attr_accessor :roman_string, :arabic
+  def initialize(stringy)
+    @roman_string = stringy
+    self.to_i # Will raise error if invalid string
   end
-  answer
-end
-
-def to_arabic(str)
+  def to_i
   int = 0
   subtractives = [
                   ["CM", 900],
@@ -47,19 +25,20 @@ def to_arabic(str)
           ]
 
   loop_count = 0 # Used to determine if invalid string (infinite loop)
-  while str.length > 0
+  while @roman_string.length > 0
     subtractives.each.each do |roman, arabic|
-      if str.sub!(/#{roman}/, '')
+      if @roman_string.sub!(/#{roman}/, '')
         int += arabic
       end
     end
     normal.each.each do |roman, arabic|
-      if str.sub!(/#{roman}/, '')
+      if @roman_string.sub!(/#{roman}/, '')
         int += arabic
       end
     end
     loop_count += 1
+    # If we keep looping the string is invalid
     raise "Not a valid Roman numeral!" if loop_count >= 100
   end
-  int
+end
 end
