@@ -47,4 +47,8 @@ describe '#to_arabic' do
   it 'returns the integer 1 when passed roman numeral I' do
     expect(to_arabic('I')).to eq 1
   end
+
+  it 'returns the integer 151 when passed the string CLI' do
+    expect(to_arabic('CLI')).to eq 151
+  end
 end
