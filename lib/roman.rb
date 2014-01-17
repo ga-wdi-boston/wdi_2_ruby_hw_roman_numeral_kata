@@ -6,7 +6,9 @@ def to_roman(key)
           100 => 'C',
           500 => 'D',
           1000 => 'M'}  #returns a string
-  roman[key]
+
   return roman[1] + roman[5] if key == 4
-end
+  else roman[key]
+  end
+
 
