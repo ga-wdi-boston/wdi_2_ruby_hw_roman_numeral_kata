@@ -62,4 +62,11 @@ describe '#to_arabic' do
     expect(to_arabic("VII")).to eq 7
     expect(to_arabic("VIII")).to eq 8
   end
+   it "should return appropriate String of stuff that requires I through X (1-39)" do
+    expect(to_arabic("IX")).to eq 9
+    expect(to_arabic("XII")).to eq 12
+    expect(to_arabic("XVIII")).to eq 18
+    expect(to_arabic("XXV")).to eq 25
+    expect(to_arabic("XXXVIII")).to eq 38
+  end
 end
