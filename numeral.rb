@@ -29,11 +29,13 @@ end
 def to_arabic(str)
   int = 0
   subtractives = [
+                  ["XC", 90],
                   ["XL", 40],
                   ["IX", 9],
                   ["IV", 4]
                   ]
   normal = [
+            ["C", 100],
             ["L", 50],
             ["X", 10],
             ["V", 5],
@@ -53,8 +55,3 @@ def to_arabic(str)
   end
   int
 end
-
-# Notes for to_arabic
-# if string.sub!(/matchthing/, '')
-# add the arabic numerals (removes the other stuff)
-# do weird characters first, then regular ones
