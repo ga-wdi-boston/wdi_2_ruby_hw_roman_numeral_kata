@@ -41,9 +41,10 @@ def to_arabic(string)
     "I" => 1
   }
   answer = 0
-  conversion_chart.keys.each do |roman|
-    if string.include?(roman)
-      answer += conversion_chart[roman]
+  for key, value in conversion_chart
+    while string.index(key) == 0
+      answer += value
+      string.slice!(key)
     end
   end
   answer
