@@ -42,3 +42,9 @@ describe '#to_roman' do
     expect(to_roman(1309)).to eq 'MCCCIX'
   end
 end
+
+describe '#to_arabic' do
+  it 'returns the integer 1 when passed roman numeral I' do
+    expect(to_arabic('I')).to eq 1
+  end
+end
