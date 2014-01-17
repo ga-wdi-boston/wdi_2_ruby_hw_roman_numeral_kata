@@ -56,4 +56,46 @@ describe '#to_roman' do
 	it 'will return "MCMLXII" if pass 1962' do
 		expect(to_roman(1962)).to eq 'MCMLXII'
 	end
+	it 'will return "MM" if pass 2000' do
+		expect(to_roman(2000)).to eq 'MM'
+	end
+end
+
+describe '#to_arabic' do
+	it 'will return i if pass I' do
+		expect(to_arabic('I')).to eq 1
+	end
+	it 'will return 2 if pass II' do
+		expect(to_arabic('II')).to eq 2
+	end
+	it 'will return 4 if pass IV' do
+		expect(to_arabic('IV')).to eq 4
+	end
+	it 'will return 6 if pass VI' do
+		expect(to_arabic('VI')).to eq 6 
+	end
+	it 'will return 5 if pass V' do
+		expect(to_arabic('V')).to eq 5
+	end
+	it 'will return 9 if pass IX' do
+		expect(to_arabic('IX')).to eq 9
+	end
+	it 'will return 539 if pass DXXXIX' do
+		expect(to_arabic('DXXXIX')).to eq 539
+	end
+	it 'will return 740 if pass DCCXL' do
+		expect(to_arabic('DCCXL')).to eq 740
+	end
+	it 'will return 1011 if pass MXI' do
+		expect(to_arabic('MXI')).to eq 1011
+	end
+	it 'will return 1338 if pass MCCCXXXVIII' do
+		expect(to_arabic('MCCCXXXVIII')).to eq 1338
+	end
+	it 'will return 1498 if pass MCDXCVIII' do
+		expect(to_arabic('MCDXCVIII')).to eq 1498
+	end
+	it 'will return 1938 if pass MCMXXXVIII' do
+		expect(to_arabic("MCMXXXVIII")).to eq 1938
+	end
 end
