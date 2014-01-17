@@ -63,7 +63,11 @@ require_relative '../number_conv'
 	end
 
 
-
+describe "#to_arabic(roman)" do
+		it "takes numbers I and returns 1" do
+			expect(to_arabic("I")).to eq 1
+		end
+end
 
 
 

@@ -1,8 +1,4 @@
-
-
-# attempting a more scalable approach
-def to_roman(num)
-	roman_hash = { 1000 => "M",
+$roman_hash = { 1000 => "M",
      900 => "CM",
      500 => "D",
      400 => "CD",
@@ -16,11 +12,13 @@ def to_roman(num)
         4 => "IV",
         1 => "I",   }
 
+# attempting a more scalable approach
+def to_roman(num)
 	if num == 0
 		return "nope"
 	else
     roman = ""
-    roman_hash.each do |value, letter|
+    $roman_hash.each do |value, letter|
       roman << letter * (num / value)
       num = num % value
     end
@@ -28,7 +26,13 @@ def to_roman(num)
   end
  end
 
+def to_arabic(roman)
 
+	anw = $roman_hash.select{|value, letter|
+		letter == roman
+	}
+	return anw.keys[0]
+end
 
 
 
