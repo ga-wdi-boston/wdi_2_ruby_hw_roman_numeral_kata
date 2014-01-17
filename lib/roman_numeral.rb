@@ -80,7 +80,7 @@ end
 
 def to_arabic(string)
 	int = 0
-	if !(string.include?('V')) && !(string.include?('X')) && !(string.include?('L')) && !(string.include?('C')) && !(string.include?('D'))
+	if !(string.include?('V')) && !(string.include?('X')) && !(string.include?('L')) && !(string.include?('C')) && !(string.include?('D')) && !(string.include?('M'))
 		i = string.length
 		while i >= 1
 			int += 1
@@ -90,7 +90,7 @@ def to_arabic(string)
 	elsif string == 'IV'
 		int = 4
 	
-	elsif !(string.include?('X')) && !(string.include?('L')) && !(string.include?('C')) && !(string.include?('D'))
+	elsif !(string.include?('X')) && !(string.include?('L')) && !(string.include?('C')) && !(string.include?('D')) && !(string.include?('M'))
 		i = string.length
 		int += 4
 		while i >= 1
@@ -111,7 +111,7 @@ def to_arabic(string)
 			end
 
 			int = int * 10 + to_arabic(string_rest)
-	elsif !(string.include?('C')) && !(string.include?('D'))
+	elsif !(string.include?('C')) && !(string.include?('D')) && !(string.include?('M'))
 			string_rest = string.delete 'L'
 			int = 50 + to_arabic(string_rest)
 	elsif !(string.include?('D'))
@@ -124,6 +124,9 @@ def to_arabic(string)
 				i -= 1
 			end
 			int = int * 100 + to_arabic(string_rest)
+	elsif !(string.include?('M'))
+		string_rest = string.delete 'D'
+		int = 500 + to_arabic(string_rest)
 	end
 	int
 end
