@@ -42,4 +42,10 @@ describe '#to_roman' do
     expect(to_roman(675)).to eq "DCLXXV"
     expect(to_roman(899)).to eq "DCCCXCIX"
   end
+  it "should return appropriate String of stuff that needs M (1-3999)" do
+    expect(to_roman(900)).to eq "CM"
+    expect(to_roman(1050)).to eq "ML"
+    expect(to_roman(2325)).to eq "MMCCCXXV"
+    expect(to_roman(3999)).to eq "MMMCMXCIX"
+  end
 end
