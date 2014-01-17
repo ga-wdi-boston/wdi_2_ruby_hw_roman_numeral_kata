@@ -70,6 +70,11 @@ describe '#to_arabic' do
 
 	it 'evaluates the sum of the value of roman characters in ascending order' do
 		expect(to_arabic('IV')).to eq 4
+		expect(to_arabic('IX')).to eq 9
+		expect(to_arabic('CXC')).to eq 190
+		expect(to_arabic('MCMLXXXIX')).to eq 1989
+		expect(to_arabic('MCXIX')).to eq 1119
+		expect(to_arabic('MMMCCCLXIX')).to eq 3369
 	end
 
 end
