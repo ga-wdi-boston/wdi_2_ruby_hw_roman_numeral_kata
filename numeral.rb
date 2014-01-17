@@ -1,18 +1,16 @@
 require 'pry'
 
 def to_roman(int)
+  conv = [
+          ["V",  5],
+          ["IV", 4],
+          ["I",  1],
+          ]
   answer = ''
-  while int > 0
-    # binding.pry
-    if int >= 5
-      answer += "V"
-      int -= 5
-    elsif int == 4
-      answer += "IV"
-      int -= 4
-    else
-      answer += ("I" * int)
-      int = 0
+  conv.each.each do |roman, arabic|
+    while int >= arabic
+      answer += roman
+      int    -= arabic
     end
   end
   answer
