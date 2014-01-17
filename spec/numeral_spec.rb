@@ -83,6 +83,13 @@ describe '#to_arabic' do
     expect(to_arabic("CCCIII")).to eq 303
     expect(to_arabic("CCCXCIX")).to eq 399
   end
+  it "should return appropriate String of stuff that needs D (1-899)" do
+    expect(to_arabic("CD")).to eq 400
+    expect(to_arabic("CDLV")).to eq 455
+    expect(to_arabic("D")).to eq 500
+    expect(to_arabic("DCLXXV")).to eq 675
+    expect(to_arabic("DCCCXCIX")).to eq 899
+  end
 end
 
 

@@ -29,12 +29,14 @@ end
 def to_arabic(str)
   int = 0
   subtractives = [
+                  ["CD", 400],
                   ["XC", 90],
                   ["XL", 40],
                   ["IX", 9],
                   ["IV", 4]
                   ]
   normal = [
+            ["D", 500],
             ["C", 100],
             ["L", 50],
             ["X", 10],
