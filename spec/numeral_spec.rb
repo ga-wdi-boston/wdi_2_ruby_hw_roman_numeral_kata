@@ -2,7 +2,7 @@ require 'spec_helper'
 require_relative '../numeral'
 
 describe '#to_roman' do
-  it "should return appropriate String of I's of when passed 1" do
+  it "should return appropriate String of I's of when passed 1-3" do
     expect(to_roman(1)).to eq "I"
     expect(to_roman(2)).to eq "II"
     expect(to_roman(3)).to eq "III"
@@ -47,5 +47,12 @@ describe '#to_roman' do
     expect(to_roman(1050)).to eq "ML"
     expect(to_roman(2325)).to eq "MMCCCXXV"
     expect(to_roman(3999)).to eq "MMMCMXCIX"
+  end
+end
+
+describe '#to_arabic' do
+  it "should return appropriate integers for a String of I's" do
+    expect(to_arabic("I")).to eq 1
+    expect(to_arabic("III")).to eq 3
   end
 end

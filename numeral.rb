@@ -26,6 +26,19 @@ def to_roman(int)
   answer
 end
 
+def to_arabic(str)
+  int = 0
+  conv = [
+          ["I", 1]
+          ]
+  while str.length > 0
+    if str.sub!(/I/, '')
+      int += 1
+    end
+  end
+  int
+end
+
 # Notes for to_arabic
 # if string.sub!(/matchthing/, '')
 # add the arabic numerals (removes the other stuff)
