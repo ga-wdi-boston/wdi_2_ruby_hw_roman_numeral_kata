@@ -12,4 +12,10 @@ describe '#to_roman' do
 		expect(roman_numerals(8)).to eq 'VIII'
 		expect(roman_numerals(9)).to eq 'IX'
 	end
+
+	it 'translates an integer of 2 digits (10-99) into roman numerals' do
+		expect(roman_numerals(10)).to eq 'X'
+
+	end
+
 end
