@@ -24,12 +24,12 @@ describe '#to_roman' do
     expect(to_roman(10)).to eq 'X'
   end
 
-  # it 'returns the correct roman numeral for int btwn 11, 48' do
-  #   expect(to_roman(6)).to eq 'VI'
-  #   expect(to_roman(8)).to eq 'VIII'
-  #   expect(to_roman(9)).to eq 'IX'
-  #   expect(to_roman(10)).to eq 'X'
-  # end
+  it 'returns the correct roman numeral for int btwn 11, 48' do
+    expect(to_roman(11)).to eq 'XI'
+    expect(to_roman(14)).to eq 'XIV'
+    expect(to_roman(29)).to eq 'XXIX'
+    expect(to_roman(35)).to eq 'XXXV'
+  end
 end
 
 
