@@ -32,6 +32,10 @@ describe '#to_roman' do
 		expect(roman_numerals(110)).to eq 'CX'
 		expect(roman_numerals(123)).to eq 'CXXIII'
 		expect(roman_numerals(135)).to eq 'CXXXV'
+		expect(roman_numerals(140)).to eq 'CXL'
+		expect(roman_numerals(150)).to eq 'CL'
+		expect(roman_numerals(185)).to eq 'CLXXXV'
+		expect(roman_numerals(190)).to eq 'CXC'
 	end
 
 end

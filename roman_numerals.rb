@@ -37,6 +37,12 @@ def roman_numerals(number)
 	#Evaluated hundreds place in roman
 	if hundreds_integer <= 3
 		hundreds_roman = 'C' * hundreds_integer
+	elsif hundreds_integer == 4
+		hundreds_roman = 'CD'
+	elsif hundreds_integer >= 5 && hundreds_integer < 9
+		hundreds_roman = 'D' + 'C' * (hundreds_roman % 5)
+	else
+		hundreds_roman = 'CM'
 	end
 
 	roman_string = hundreds_roman + tens_roman + ones_roman
