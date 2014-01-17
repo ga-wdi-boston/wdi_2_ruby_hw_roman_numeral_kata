@@ -1,11 +1,16 @@
 class Numbers
-	attr_accessor :number
+
+	CONVERSION = {1 => "I", 5 => "V"}
 
 	def initialize(number)
 		@number = number
 	end
 
-	def toRoman(number)
-		return 'I' * @number
+	def toRoman
+		if CONVERSION[@number]
+			return CONVERSION[@number]
+		else
+			return "I" * @number
+		end
 	end
 end
