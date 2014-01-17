@@ -22,6 +22,13 @@ describe '#to_roman' do
 		expect(to_roman(37)).to eq 'XXXVII'
 	end
 
+	it 'returns LXXXVII if you input  87' do
+		expect(to_roman(87)).to eq 'LXXXVII'
+	end
+
+	it 'returns CCL if you input 250' do
+		expect(to_roman(250)).to eq 'CCL'
+	end
 
 end
 

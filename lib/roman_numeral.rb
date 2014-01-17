@@ -30,7 +30,29 @@ def to_roman(int)
 			i += 1
 		end
 		roman = roman + to_roman(rest)
+	
+	elsif int >= 50 && int <= 99
+		ten_digit = (int - 50) / 10
+		rest = int % 10
+		roman += 'L'
+		i = 1
+		while i <= ten_digit
+			roman += 'X'
+			i += 1
+		end
+		roman = roman + to_roman(rest)
+	
+	elsif int >= 100 && int <= 499
+		hundred_digit = int / 100
+		rest = int % 100
+		i = 1
+		while i <= hundred_digit
+			roman += 'C'
+			i += 1
+		end
+		roman = roman + to_roman(rest)
 	end
+		
 	roman
 end
 
