@@ -27,4 +27,11 @@ def toArabic(input)
 		end
 	end
 	numeral
+
+# 	conversion.each do |input| index(key) == 0
+# 			numeral += value
+# 			input.slice!(key)
+# 	puts numeral
+# end
+
 end
