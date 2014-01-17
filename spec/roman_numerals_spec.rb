@@ -56,10 +56,16 @@ describe '#to_arabic' do
 
 	it 'evaluates the sum of the characters based on their roman value' do
 		expect(to_arabic('III')).to eq 3
+		expect(to_arabic('VIII')).to eq 8
 		expect(to_arabic('II')).to eq 2
 		expect(to_arabic('I')).to eq 1
 		expect(to_arabic('V')).to eq 5
 		expect(to_arabic('X')).to eq 10
+		expect(to_arabic('XV')).to eq 15
+		expect(to_arabic('L')).to eq 50
+		expect(to_arabic('CC')).to eq 200
+		expect(to_arabic('D')).to eq 500
+		expect(to_arabic('MMM')).to eq 3000
 
 	end
 
