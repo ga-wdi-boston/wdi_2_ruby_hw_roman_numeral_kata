@@ -20,4 +20,16 @@ describe '#to_roman' do
 	it 'will return "IX" if pass 9' do
 		expect(to_roman(9)).to eq 'IX'
 	end
+	it 'will return "XXII" if pass 22' do
+		expect(to_roman(22)).to eq 'XXII'
+	end
+	it 'will return "XXXIX" if pass 39' do
+		expect(to_roman(39)).to eq 'XXXIX'
+	end
+	it 'will return "XXXVII" if pass 37' do
+		expect(to_roman(37)).to eq 'XXXVII'
+	end
+	it 'will return "XXXIV" if pass 34' do
+		expect(to_roman(34)).to eq 'XXXIV'
+	end
 end
