@@ -3,7 +3,6 @@ class RomanNum
 
   ## the artist formally known as #to_roman function ##
   def initialize(int)
-    # romans = %w{I V X L C D M}
     romans = {1000 => 'M', 500 => 'D', 100 => 'C', 50 => 'L', 10 => 'X',
       5 => 'V', 1 => 'I'}
 
@@ -76,7 +75,20 @@ class RomanNum
   end
 
   def to_arabic
+    romans = {'CM' => 900, 'M' => 1000, 'CD' => 400, 'XC' => 90, 'C' => 100, 'XL' => 40, 'L' => 50, 'IX' => 9, 'X' => 10, 'IV' => 4, 'V' => 5, 'I' => 1}
+    arabic = 0
 
+    romans.each do |roman, int|
+      sym_array = @roman.scan(Regexp.new roman)
+      count = sym_array.count
+      count.times do
+        @roman.slice!(roman)
+        arabic += int
+      end
+    end
+
+    #### Output #####
+    arabic
   end
 end
 

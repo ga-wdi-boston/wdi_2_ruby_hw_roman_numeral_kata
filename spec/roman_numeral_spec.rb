@@ -45,6 +45,15 @@ describe RomanNum do
   end
 
   describe '#to_arabic' do
-
+    it 'returns an integer representing roman numeral' do
+      expect(RomanNum.new(2).to_arabic).to eq 2
+      expect(RomanNum.new(3).to_arabic).to eq 3
+      expect(RomanNum.new(4).roman).to eq 'IV'
+      expect(RomanNum.new(5).roman).to eq 'V'
+      expect(RomanNum.new(6).roman).to eq 'VI'
+      expect(RomanNum.new(8).roman).to eq 'VIII'
+      expect(RomanNum.new(9).roman).to eq 'IX'
+      expect(RomanNum.new(10).roman).to eq 'X'
+    end
   end
 end
