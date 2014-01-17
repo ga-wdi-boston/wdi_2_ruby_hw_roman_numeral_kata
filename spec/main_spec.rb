@@ -29,14 +29,20 @@ describe Fixnum do
 		end
 
 		it 'adds "ix" to value for numbers greater than 10 ending in 9' do
-			expect(29.to_roman).to eq 'xix'
-			expect(79.to_roman).to eq 'lxix'
+			expect(29.to_roman).to eq 'xxix'
+			expect(79.to_roman).to eq 'lxxix'
 		end
 
 		it 'adds "v" to roman numeral value for multiples of 5' do
 			expect(5.to_roman).to eq 'v'
 
 			expect(25.to_roman).to eq 'xxv'
+		end
+
+		it 'adds "i" to roman numeral value for multiples of 1' do
+			expect(3.to_roman).to eq 'iii'
+
+			expect(28.to_roman).to eq 'xxviii'
 		end
 	end
 end
