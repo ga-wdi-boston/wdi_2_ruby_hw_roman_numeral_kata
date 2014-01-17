@@ -37,4 +37,22 @@ require_relative '../number_conv'
 			expect(to_roman(7)).to eq "VII"
 			expect(to_roman(3)).to eq "III"
 		end
+		it "takes numbers nine and returns IX" do
+			expect(to_roman(9)).to eq "IX"
+			expect(to_roman(3)).to eq "III"
+		end
+		it "takes numbers 10 and returns X" do
+			expect(to_roman(10)).to eq "X"
+			expect(to_roman(3)).to eq "III"
+			expect(to_roman(20)).to eq "XX"
+		end
 	end
+
+
+
+
+
+
+
+
+
