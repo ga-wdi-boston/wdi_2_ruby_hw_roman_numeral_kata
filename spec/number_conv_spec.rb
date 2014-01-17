@@ -45,6 +45,16 @@ require_relative '../number_conv'
 			expect(to_roman(50)).to eq "L"
 			expect(to_roman(51)).to eq "LI"
 		end
+		it "takes numbers 90 and 100 and converts " do
+			expect(to_roman(90)).to eq "XC"
+			expect(to_roman(100)).to eq "C"
+			expect(to_roman(107)).to eq "CVII"
+		end
+		it "takes numbers 400 and 500 and converts " do
+			expect(to_roman(400)).to eq "CD"
+			expect(to_roman(500)).to eq "D"
+			expect(to_roman(515)).to eq "DXV"
+		end
 	end
 
 
