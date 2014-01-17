@@ -1,0 +1,2 @@
+def toArabic(number)
+end
