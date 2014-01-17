@@ -1,11 +1,17 @@
 require 'pry'
 
 def to_roman(*num)
-	raise "Please enter a single integer from 1-2000" 	unless num.length == 1 && num[0].is_a?(Numeric)
+	raise "Please enter a single integer from 1-3000" 	unless num.length == 1 && num[0].is_a?(Numeric)
 
 	@num = num[0]
 
 	romans = {
+		1000 => "M",
+		900 => "CM",
+    500 => "D",
+    400 => "CD",
+    100 => "C",
+		90 => "XC",
 		50 => "L",
 		40 => "XL",
 		10 => "X",
