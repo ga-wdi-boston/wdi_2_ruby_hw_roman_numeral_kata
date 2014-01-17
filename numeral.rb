@@ -28,12 +28,23 @@ end
 
 def to_arabic(str)
   int = 0
-  conv = [
-          ["I", 1]
+  subtractives = [
+                  ["IV", 4]
+                  ]
+  normal = [
+            ["V", 5],
+            ["I", 1]
           ]
   while str.length > 0
-    if str.sub!(/I/, '')
-      int += 1
+    subtractives.each.each do |roman, arabic|
+      if str.sub!(/#{roman}/, '')
+        int += arabic
+      end
+    end
+    normal.each.each do |roman, arabic|
+      if str.sub!(/#{roman}/, '')
+        int += arabic
+      end
     end
   end
   int

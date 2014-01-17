@@ -55,4 +55,11 @@ describe '#to_arabic' do
     expect(to_arabic("I")).to eq 1
     expect(to_arabic("III")).to eq 3
   end
+  it "should return appropriate ints for strings using I's or V's only" do
+    expect(to_arabic("IV")).to eq 4
+    expect(to_arabic("V")).to eq 5
+    expect(to_arabic("VI")).to eq 6
+    expect(to_arabic("VII")).to eq 7
+    expect(to_arabic("VIII")).to eq 8
+  end
 end
