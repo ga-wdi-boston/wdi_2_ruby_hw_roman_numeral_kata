@@ -67,6 +67,14 @@ describe "#to_arabic(roman)" do
 		it "takes numbers I and returns 1" do
 			expect(to_arabic("I")).to eq 1
 		end
+
+		it "takes numbers two and returns II" do
+			expect(to_arabic("II")).to eq 2
+		end
+
+		it "takes numbers three and returns III" do
+			expect(to_arabic("III")).to eq 3
+		end
 end
 
 
