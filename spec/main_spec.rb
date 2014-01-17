@@ -48,4 +48,9 @@ describe Fixnum do
 end
 
 describe '.to_arabic' do
-	it 'accepts a string'
+	it 'accepts a roman numeral string and outputs the corresponding arabic value' do
+		expect(to_arabic('mdcc')).to eq 1700
+		expect(to_arabic('mcd')).to eq 1400
+		expect(to_arabic('iv')).to eq 4
+	end
+end
