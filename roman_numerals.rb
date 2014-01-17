@@ -34,6 +34,13 @@ def to_roman(*num)
 
 end
 
+def to_arabic(*string)
+	raise "Please enter a single string!" unless string.length == 1 && string[0].is_a?(String)
+	"valid input!"
+end
+
+# binding.pry
+
 
 
 

@@ -39,3 +39,13 @@ describe '#to_roman' do
 	end
 
 end
+
+describe '#to_arabic' do
+	it 'raises an error if the argument is not a single string' do
+		expect(to_arabic("valid")).to eq "valid input!"
+		expect{ to_arabic(10) }.to raise_error "Please enter a single string!"
+	end
+
+	# it
+
+end
