@@ -14,4 +14,11 @@ describe '#to_roman' do
     expect(to_roman(7)).to eq "VII"
     expect(to_roman(8)).to eq "VIII"
   end
+  it "should return appropriate String of stuff that requires I through X (1-38)" do
+    expect(to_roman(9)).to eq "IX"
+    expect(to_roman(12)).to eq "XII"
+    expect(to_roman(18)).to eq "XVIII"
+    expect(to_roman(25)).to eq "XXV"
+    expect(to_roman(38)).to eq "XXXVIII"
+  end
 end
