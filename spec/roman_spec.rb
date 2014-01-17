@@ -47,4 +47,7 @@ describe '#to_roman' do
 	it 'will return "CDXVII" if pass 417' do
 		expect(to_roman(417)).to eq 'CDXVII'
 	end
+		it 'will return "DCCCXC" if pass 890' do
+		expect(to_roman(890)).to eq 'DCCCXC'
+	end
 end
