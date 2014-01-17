@@ -1,5 +1,7 @@
 def to_roman(num)
   roman = { 1 => "I",
+            2 => "II",
+            3 => "III",
             4 => "IV",
             5 => "V",
             9 => "IX",
@@ -15,6 +17,16 @@ def to_roman(num)
 
   return roman[num] if roman.has_key?(num)
 
+  [[ 10, 1], [ 5, 1]].each do |key, difference|
+    while num > key
+      key2 = num.to_i - key.to_i
+      return roman[key].to_s << roman[key2].to_s
 
+    end
   end
+end
 
+
+
+  # if num >= cutPoint - subtractor and num < cutPoint then
+  #   return roman(subtractor) + roman(num + subtractor)

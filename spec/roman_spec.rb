@@ -14,8 +14,12 @@ describe '#to_roman' do
     expect(to_roman(90)).to eq "XC"
     expect(to_roman(500)).to eq "D"
   end
+
+  it 'tests that in Roman numeral format, V(5) plus III(3) equals VIII (8)' do
+    expect(to_roman(8)).to eq "VIII"
+  end
 end
 
-# exception: I can be placed before V and X to make 4 units (IV) and 9 units (IX)
-# exception: X can be placed before L and C to make 40 (XL) and 90 (XC respectively)
-# exception: C can be placed before D and M to make 400 (CD) and 900 (CM)
+# 1-5 = 4
+# 1-10 = 9
+# 8 - 3 + 5
