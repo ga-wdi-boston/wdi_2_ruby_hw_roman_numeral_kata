@@ -29,10 +29,11 @@ describe '#to_roman' do
     expect(to_roman(88)).to eq "LXXXVIII"
   end
   it "should return appropriate String of stuff that needs C (1-399)" do
-    expect(to_roman(42)).to eq "XLII"
-    expect(to_roman(58)).to eq "LVIII"
-    expect(to_roman(65)).to eq "LXV"
-    expect(to_roman(79)).to eq "LXXIX"
-    expect(to_roman(88)).to eq "LXXXVIII"
+    expect(to_roman(92)).to eq "XCII"
+    expect(to_roman(145)).to eq "CXLV"
+    expect(to_roman(292)).to eq "CCXCII"
+    expect(to_roman(303)).to eq "CCCIII"
+    expect(to_roman(399)).to eq "CCCXCIX"
   end
+  it "should return appropriate String of stuff that needs D (1-899)"
 end
