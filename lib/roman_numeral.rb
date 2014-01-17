@@ -127,6 +127,17 @@ def to_arabic(string)
 	elsif !(string.include?('M'))
 		string_rest = string.delete 'D'
 		int = 500 + to_arabic(string_rest)
+
+	else
+		string_rest = string.delete 'M'
+		string.slice!(string_rest)
+
+		i = string.length
+		while i >= 1
+			int += 1
+			i -= 1
+		end
+		int = int * 1000 + to_arabic(string_rest)
 	end
 	int
 end
