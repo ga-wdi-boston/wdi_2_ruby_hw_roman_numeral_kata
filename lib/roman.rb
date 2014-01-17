@@ -13,19 +13,8 @@ def to_roman(num)
             900 => "CM",
             1000 => "M" }
 
-  roman_num = ''
-  if num == 5
-    roman_num = 'V'
-    num -= 5
+  return roman[num] if roman.has_key?(num)
+
+
   end
 
-  if num == 4
-    roman_num = 'IV'
-    num -= 4
-  end
-  while num >= 1
-    roman_num += 'I'
-    num -= 1
-  end
-    roman_num
-end

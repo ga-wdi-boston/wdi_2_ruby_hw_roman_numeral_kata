@@ -9,12 +9,10 @@ describe '#to_roman' do
     expect(to_roman (5)).to eq "V"
   end
 
-  it 'tests addition of Roman numerals when input integer is not part of the exception' do
-    expect(to_roman(2)).to eq "II"
-    expect(to_roman(3)).to eq "III"
-  end
-  it 'tests when input integer is 4' do
+  it 'tests other integers in listed as keys in the roman hash' do
     expect(to_roman(4)).to eq "IV"
+    expect(to_roman(90)).to eq "XC"
+    expect(to_roman(500)).to eq "D"
   end
 end
 
