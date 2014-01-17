@@ -1,69 +1,19 @@
 require 'pry'
 
-class RomanNum
-
-end
-
 class Fixnum
 	def to_roman
+		values = [['M', 1000], ['CM', 900], ['D', 500], ['CD', 400], ['C', 100],
+							['XC', 90], ['L', 50], ['XL', 40], ['X', 10], ['IX', 9], ['V', 5], ['IV', 4], ['I', 1]]
 		roman = ''
 		num = self
 		while num > 0
-
-			if num / 1000 > 0
-				roman += 'm' * (num / 1000)
+			values.each do |value|
+				if num / value[1] != 0
+					roman += (value[0] * (num / value[1]))
+				end
+				num = num % value[1]
 			end
-
-			num = num % 1000
-
-			if num / 500 > 0
-				roman += 'd' * (num / 500)
-
-			end
-
-			num = num % 500
-
-			if num / 100 > 0
-				roman += 'c' * (num / 100)
-
-			end
-
-			num = num % 100
-
-			if num / 50 > 0
-				roman += 'l' * (num / 50)
-			end
-
-			num = num % 50
-
-
-			if num / 10 > 0
-				roman += 'x' * (num / 10)
-			end
-
-			num = num % 10
-
-			if num == 9
-				roman += 'ix'
-
-			end
-
-			num = num % 9
-
-			if num / 5 > 0
-				roman += 'v'
-				num = num % 5
-			end
-
-			if num == 4
-				roman += 'iv'
-				num = num - 4
-			end
-
-			roman += 'i' * (num)
-			num = num % 1
 		end
-
 		roman
 	end
 end
@@ -88,16 +38,3 @@ def to_arabic(roman_value)
 	end
 	result
 end
-
-
-# def get_next_roman(current_value, roman_break, value)
-# 	if current_value / roman_break > 0
-# 		this_val = "#{value}" * (current_value / roman_break)
-# 		current_value = current_value % roman_break
-# 	end
-# 	array = [this_val, current_value]
-# end
-
-
-
-# puts 1000.to_roman
