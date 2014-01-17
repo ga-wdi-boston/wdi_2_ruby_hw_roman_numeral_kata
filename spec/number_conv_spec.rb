@@ -25,4 +25,8 @@ require_relative '../number_conv'
 			expect(to_roman(5)).to eq "V"
 			expect(to_roman(3)).to eq "III"
 		end
+		it "takes numbers six and returns VI" do
+			expect(to_roman(6)).to eq "VI"
+			expect(to_roman(3)).to eq "III"
+		end
 	end
