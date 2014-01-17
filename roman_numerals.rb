@@ -4,11 +4,14 @@ def roman_numerals(number)
 
 	number = number.to_s
 
+	# Extracts digits in each place value (ones-thousands)
 	ones_place = number[-1].to_i
 	tens_place = number[-2].to_i
 	hundreds_place = number[-3].to_i
 	thousands_place = number[-4].to_i
 
+
+	#Assigns empty strings to each roman place
 	ones_roman = ''
 	tens_roman = ''
 	hundreds_roman = ''
@@ -52,6 +55,7 @@ def roman_numerals(number)
 		thousands_roman = 'M' * thousands_place
 	end
 
+	# Adds strings for each place value to get final answer
 	roman_string = thousands_roman + hundreds_roman + tens_roman + ones_roman
 	roman_string
 
