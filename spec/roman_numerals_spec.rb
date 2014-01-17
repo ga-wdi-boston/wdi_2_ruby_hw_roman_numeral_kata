@@ -2,6 +2,8 @@ require 'spec_helper'
 require_relative '../roman_numerals'
 
 describe '#to_roman' do
+
+	# Tests for 1 digit numbers
 	it 'translates an integer under 10 into roman numerals' do
 		expect(roman_numerals(0)).to eq ''
 		expect(roman_numerals(1)).to eq 'I'
@@ -13,6 +15,7 @@ describe '#to_roman' do
 		expect(roman_numerals(9)).to eq 'IX'
 	end
 
+	# Tests for 2 digit numbers
 	it 'translates an integer of 2 digits (10-99) into roman numerals' do
 		expect(roman_numerals(10)).to eq 'X'
 		expect(roman_numerals(30)).to eq 'XXX'
@@ -24,5 +27,11 @@ describe '#to_roman' do
 		expect(roman_numerals(90)).to eq 'XC'
 	end
 
+	# Tests for 3 digit numbers
+	it 'translates an integer of 3 digits (100-999) into roman numerals' do
+		expect(roman_numerals(110)).to eq 'CX'
+		expect(roman_numerals(123)).to eq 'CXXIII'
+		expect(roman_numerals(135)).to eq 'CXXXV'
+	end
 
 end

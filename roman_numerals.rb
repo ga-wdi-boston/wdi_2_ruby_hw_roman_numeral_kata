@@ -34,7 +34,12 @@ def roman_numerals(number)
 		tens_roman = 'XC'
 	end
 
-	roman_string = tens_roman + ones_roman
+	#Evaluated hundreds place in roman
+	if hundreds_integer <= 3
+		hundreds_roman = 'C' * hundreds_integer
+	end
+
+	roman_string = hundreds_roman + tens_roman + ones_roman
 	roman_string
 
 end
