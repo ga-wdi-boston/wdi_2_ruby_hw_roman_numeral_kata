@@ -35,7 +35,7 @@ describe '#to_roman' do
 		expect(to_roman(96)).to eq "XCVI"
 	end
 
-	it 'converts numbers 100-999 to Roman Numerals' do
+	it 'converts numbers 100 - 999 to Roman Numerals' do
 		expect(to_roman(100)).to eq "C"
 		expect(to_roman(200)).to eq "CC"
 		expect(to_roman(333)).to eq "CCCXXXIII"
@@ -43,13 +43,40 @@ describe '#to_roman' do
 		expect(to_roman(999)).to eq "CMXCIX"
 	end
 
+	it 'converts numbers 1000 - 3999 to Roman Numerals' do
+		expect(to_roman(1000)).to eq "M"
+		expect(to_roman(3482)).to eq "MMMCDLXXXII"
+		expect(to_roman(3999)).to eq "MMMCMXCIX"
+	end
+end
+
+
+describe 'to_arabic' do
+
+	it 'takes a roman numeral string (under 10) and converts it to Arabic integer' do
+		expect(to_arabic("VIII")).to eq 8
+	end
+
+	it 'converts a roman numeral string under 100 to Arabic Numerals' do
+		expect(to_arabic("XXXVII")).to eq 38
+	end
+
 
 end
 
 
-# describe 'to_arabic' do
 
-# end
+
+
+
+
+
+
+
+
+
+
+
 
 
 
