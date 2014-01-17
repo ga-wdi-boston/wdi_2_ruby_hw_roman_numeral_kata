@@ -19,8 +19,10 @@ describe '#to_roman' do
 	end
 
 	it 'returns XXXVII if you input 37' do
-		expect(to_roman(28)).to eq 'XXXVII'
+		expect(to_roman(37)).to eq 'XXXVII'
 	end
+
+
 end
 
 
