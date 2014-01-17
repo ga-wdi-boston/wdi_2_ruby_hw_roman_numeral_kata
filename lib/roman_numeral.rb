@@ -76,5 +76,19 @@ def to_roman(int)
 	roman
 end
 
+def to_arabic(string)
+	int = 0
+	if string.length <= 3
+		i = string.length
+		while i >= 1
+			int += 1
+			i -= 1
+		end
+	end
+	int
+end
+
+
+
 
 

@@ -40,6 +40,10 @@ describe '#to_roman' do
 
 end
 
-
+describe 'to_arabic' do
+	it 'returns 1 if you input I' do
+		expect(to_arabic('II')).to eq 2
+	end
+end
 
 
