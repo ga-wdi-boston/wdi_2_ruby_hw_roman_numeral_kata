@@ -61,9 +61,13 @@ def roman_numerals(number)
 
 end
 
+
 def to_arabic(string)
+
+	# Takes input string and creates array of roman characters
 	input_array = string.split(//)
 
+	# Creates hash of roman characters and their absolute values
 	roman_values = {
 		'I' => 1,
 		'V' => 5,
@@ -74,12 +78,12 @@ def to_arabic(string)
 		'M' => 1000
 	}
 
+	# Creating array of absolute value of each input character
 	input_values = input_array.map {|letter| roman_values[letter]}
 
+	# Finds the sign (+/-) of each character based on the character that follow
 	input_signs = input_values.map do |value|
 		my_index = input_values.index(value)
-
-		# binding.pry
 
 		if input_values[(my_index + 1)] == nil
 			1
@@ -92,11 +96,11 @@ def to_arabic(string)
 
 	arabic_total = 0
 
+	# Multiplies the value of each character by its signs to find total
 	input_values.each do |value|
 		my_index = input_values.index(value)
 
 		arabic_total += (value * input_signs[my_index])
-
 	end
 
 	arabic_total
