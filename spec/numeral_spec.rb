@@ -105,6 +105,13 @@ describe RomanNum do
       expect {RomanNum.new("Prescott")}.to raise_error "Not a valid Roman numeral!"
     end
   end
+  describe '#to_i' do
+    it 'should return the arabic representation of the roman numeral' do
+      expect(RomanNum.new("XXX").to_i).to eq 30
+      expect(RomanNum.new("ML").to_i).to eq 1050
+      expect(RomanNum.new("MMMCMXCIX").to_i).to eq 3999
+    end
+  end
 end
 
 
