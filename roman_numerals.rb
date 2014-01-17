@@ -63,6 +63,7 @@ end
 
 def to_arabic(string)
 	input_array = string.split(//)
+
 	roman_values = {
 		'I' => 1,
 		'V' => 5,
@@ -73,10 +74,29 @@ def to_arabic(string)
 		'M' => 1000
 	}
 
+	input_values = input_array.map {|letter| roman_values[letter]}
+
+	input_signs = input_values.map do |value|
+		my_index = input_values.index(value)
+
+		# binding.pry
+
+		if input_values[(my_index + 1)] == nil
+			1
+		elsif value < input_values[(my_index + 1)]
+			-1
+		else
+			1
+		end
+	end
+
 	arabic_total = 0
 
-	input_array.each do |letter|
-		arabic_total += roman_values[letter]
+	input_values.each do |value|
+		my_index = input_values.index(value)
+
+		arabic_total += (value * input_signs[my_index])
+
 	end
 
 	arabic_total

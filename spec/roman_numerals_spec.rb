@@ -54,7 +54,7 @@ describe '#to_arabic' do
 	# 	expect(to_arabic('III')).to eq ['I','I','I']
 	# end
 
-	it 'evaluates the sum of the characters based on their roman value' do
+	it 'evaluates the sum of the characters based on their roman value if characters in descending order' do
 		expect(to_arabic('III')).to eq 3
 		expect(to_arabic('VIII')).to eq 8
 		expect(to_arabic('II')).to eq 2
@@ -66,7 +66,10 @@ describe '#to_arabic' do
 		expect(to_arabic('CC')).to eq 200
 		expect(to_arabic('D')).to eq 500
 		expect(to_arabic('MMM')).to eq 3000
+	end
 
+	it 'evaluates the sum of the value of roman characters in ascending order' do
+		expect(to_arabic('IV')).to eq 4
 	end
 
 end
