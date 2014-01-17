@@ -9,8 +9,11 @@ describe '#to_roman' do
     expect(to_roman (500)).to eq "D"
     expect(to_roman (1000)).to eq "M"
   end
-end
 
+  it 'places an "I" before a "V" when "4" is passed into the method' do
+    expect(to_roman(4)).to eq "IV"
+  end
+end
 
 # I can be placed before V and X to make 4 units (IV) and 9 units (IX)
 # X can be placed before L and C to make 40 (XL) and 90 (XC respectively)
