@@ -38,4 +38,13 @@ describe '#to_roman' do
 		expect(roman_numerals(190)).to eq 'CXC'
 	end
 
+	# Tests for 4 digit numbers
+	it 'translates an integer of 4 digits (1000-4000) into roman numerals' do
+		expect(roman_numerals(1000)).to eq 'M'
+		expect(roman_numerals(2375)).to eq 'MMCCCLXXV'
+		expect(roman_numerals(3012)).to eq 'MMMXII'
+		expect(roman_numerals(4000)).to eq 'MMMM'
+	end
+
+
 end
