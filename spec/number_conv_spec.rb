@@ -97,6 +97,12 @@ describe "#to_arabic(roman)" do
 		it "takes roman number XX and returns number 20" do
 			expect(to_arabic("XX")).to eq 20
 		end
+		it "takes roman number XLV and returns number 45" do
+			expect(to_arabic("XLV")).to eq 45
+		end
+		it "takes roman number MM and returns number 2000" do
+			expect(to_arabic("MM")).to eq 2000
+		end
 end
 
 
