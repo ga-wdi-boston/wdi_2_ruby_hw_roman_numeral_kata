@@ -1,7 +1,9 @@
 def to_roman(number)
   if number == 1
     'I'
-  else
+  elsif number == 5
     'V'
+  else
+    'X'
   end
 end

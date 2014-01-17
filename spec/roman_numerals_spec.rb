@@ -9,4 +9,8 @@ describe '#to_roman' do
   it 'returns the roman numeral string V when passed the integer 5' do
     expect(to_roman(5)).to eq 'V'
   end
+
+  it 'returns the roman numeral string X when passed the integer 10' do
+    expect(to_roman(10)).to eq 'X'
+  end
 end
