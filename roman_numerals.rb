@@ -23,3 +23,7 @@ def to_roman(number)
   answer
 end
 
+
+def to_arabic(string)
+  1
+end
