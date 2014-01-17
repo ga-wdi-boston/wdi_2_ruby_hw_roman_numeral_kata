@@ -4,7 +4,6 @@ class RomanNum
 	attr_accessor :roman
 	def initialize(value)
 		@roman = value.upcase
-		self.to_i
 	end
 
 	def to_i
@@ -30,7 +29,7 @@ class RomanNum
 	end
 end
 
-# number333 = RomanNum.new("XIX").to_i
+puts number333 = RomanNum.new("XXX").to_i
 # number2 = RomanNum.new("XIX")
 # integer = number2.to_i
 
