@@ -2,74 +2,75 @@ require 'spec_helper'
 require 'pry'
 require_relative '../lib/roman_numeral'
 
-describe RomanNum do
+describe Fixnum do
   describe '#to_roman' do
-
     it 'returns the correct roman numeral between 1-3' do
-      expect(RomanNum.new(2).roman).to eq 'II'
-      expect(RomanNum.new(3).roman).to eq 'III'
+      expect((2).to_roman.roman).to eq 'II'
+      expect((3).to_roman.roman).to eq 'III'
     end
 
     it 'returns the correct roman numeral for int close to 5' do
-      expect(RomanNum.new(4).roman).to eq 'IV'
-      expect(RomanNum.new(5).roman).to eq 'V'
+      expect((4).to_roman.roman).to eq 'IV'
+      expect((5).to_roman.roman).to eq 'V'
     end
 
     it 'returns the correct roman numeral for int btwn 5 10' do
-      expect(RomanNum.new(6).roman).to eq 'VI'
-      expect(RomanNum.new(8).roman).to eq 'VIII'
-      expect(RomanNum.new(9).roman).to eq 'IX'
-      expect(RomanNum.new(10).roman).to eq 'X'
+      expect((6).to_roman.roman).to eq 'VI'
+      expect((8).to_roman.roman).to eq 'VIII'
+      expect((9).to_roman.roman).to eq 'IX'
+      expect((10).to_roman.roman).to eq 'X'
     end
 
     it 'returns the correct roman numeral for int btwn 11, 48' do
-      expect(RomanNum.new(11).roman).to eq 'XI'
-      expect(RomanNum.new(14).roman).to eq 'XIV'
-      expect(RomanNum.new(29).roman).to eq 'XXIX'
-      expect(RomanNum.new(35).roman).to eq 'XXXV'
+      expect((11).to_roman.roman).to eq 'XI'
+      expect((14).to_roman.roman).to eq 'XIV'
+      expect((29).to_roman.roman).to eq 'XXIX'
+      expect((35).to_roman.roman).to eq 'XXXV'
     end
 
     it 'returns the correct roman numeral for int btwn 49, 101' do
-      expect(RomanNum.new(49).roman).to eq 'XLIX'
-      expect(RomanNum.new(50).roman).to eq 'L'
-      expect(RomanNum.new(91).roman).to eq 'XCI'
-      expect(RomanNum.new(101).roman).to eq 'CI'
+      expect((49).to_roman.roman).to eq 'XLIX'
+      expect((50).to_roman.roman).to eq 'L'
+      expect((91).to_roman.roman).to eq 'XCI'
+      expect((101).to_roman.roman).to eq 'CI'
     end
 
     it 'returns the correct roman numeral for high int!!' do
-      expect(RomanNum.new(424).roman).to eq 'CDXXIV'
-      expect(RomanNum.new(591).roman).to eq 'DXCI'
-      expect(RomanNum.new(909).roman).to eq 'CMIX'
-      expect(RomanNum.new(3494).roman).to eq 'MMMCDXCIV'
-      expect(RomanNum.new(4999).roman).to eq 'MMMMCMXCIX'
+      expect((424).to_roman.roman).to eq 'CDXXIV'
+      expect((591).to_roman.roman).to eq 'DXCI'
+      expect((909).to_roman.roman).to eq 'CMIX'
+      expect((3494).to_roman.roman).to eq 'MMMCDXCIV'
+      expect((4999).to_roman.roman).to eq 'MMMMCMXCIX'
     end
   end
+end
 
+describe RomanNum do
   describe '#to_arabic' do
     it 'returns an integer representing roman numeral' do
-      expect(RomanNum.new(2).to_arabic).to eq 2
-      expect(RomanNum.new(3).to_arabic).to eq 3
-      expect(RomanNum.new(4).to_arabic).to eq 4
-      expect(RomanNum.new(5).to_arabic).to eq 5
-      expect(RomanNum.new(6).to_arabic).to eq 6
-      expect(RomanNum.new(8).to_arabic).to eq 8
-      expect(RomanNum.new(9).to_arabic).to eq 9
-      expect(RomanNum.new(10).to_arabic).to eq 10
-      expect(RomanNum.new(14).to_arabic).to eq 14
-      expect(RomanNum.new(29).to_arabic).to eq 29
+      expect((2).to_roman.to_i).to eq 2
+      expect((3).to_roman.to_i).to eq 3
+      expect((4).to_roman.to_i).to eq 4
+      expect((5).to_roman.to_i).to eq 5
+      expect((6).to_roman.to_i).to eq 6
+      expect((8).to_roman.to_i).to eq 8
+      expect((9).to_roman.to_i).to eq 9
+      expect((10).to_roman.to_i).to eq 10
+      expect((14).to_roman.to_i).to eq 14
+      expect((29).to_roman.to_i).to eq 29
 
-      expect(RomanNum.new(49).to_arabic).to eq 49
-      expect(RomanNum.new(50).to_arabic).to eq 50
-      expect(RomanNum.new(91).to_arabic).to eq 91
-      expect(RomanNum.new(101).to_arabic).to eq 101
+      expect((49).to_roman.to_i).to eq 49
+      expect((50).to_roman.to_i).to eq 50
+      expect((91).to_roman.to_i).to eq 91
+      expect((101).to_roman.to_i).to eq 101
 
-      expect(RomanNum.new(424).to_arabic).to eq 424
-      expect(RomanNum.new(909).to_arabic).to eq 909
-      expect(RomanNum.new(3494).to_arabic).to eq 3494
-      expect(RomanNum.new(4999).to_arabic).to eq 4999
+      expect((424).to_roman.to_i).to eq 424
+      expect((909).to_roman.to_i).to eq 909
+      expect((3494).to_roman.to_i).to eq 3494
+      expect((4999).to_roman.to_i).to eq 4999
 
       # binding.pry
-      expect(RomanNum.new(591).to_arabic).to eq 591
+      expect((591).to_roman.to_i).to eq 591
     end
   end
 end

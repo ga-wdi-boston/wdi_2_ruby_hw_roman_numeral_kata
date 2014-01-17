@@ -1,8 +1,7 @@
-class RomanNum
-  attr_accessor :roman
+class Fixnum
 
-  ## the artist formally known as #to_roman function ##
-  def initialize(int)
+  def to_roman
+    int = self
     romans = {1000 => 'M', 500 => 'D', 100 => 'C', 50 => 'L', 10 => 'X',
       5 => 'V', 1 => 'I'}
 
@@ -71,10 +70,22 @@ class RomanNum
     end
 
     #### Output ####
-    @roman = m << d << c << l << x << v << i
+   roman = m << d << c << l << x << v << i
+   RomanNum.new(roman)
+  end
+end
+
+
+
+class RomanNum
+  attr_accessor :roman
+
+  ## the artist formally known as #to_roman function ##
+  def initialize(roman)
+    @roman = roman
   end
 
-  def to_arabic
+  def to_i
     romans = {'CM' => 900, 'M' => 1000, 'CD' => 400, 'D' => 500, 'XC' => 90, 'C' => 100, 'XL' => 40, 'L' => 50, 'IX' => 9, 'X' => 10, 'IV' => 4, 'V' => 5, 'I' => 1}
     arabic = 0
 
@@ -86,6 +97,9 @@ class RomanNum
         arabic += int
       end
     end
+
+    ## raise an error if there is anything left in string
+    raise 'Not a valid roman numeral' unless @roman.length == 0
 
     #### Output #####
     arabic
