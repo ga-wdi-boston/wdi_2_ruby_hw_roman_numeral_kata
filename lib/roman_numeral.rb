@@ -16,5 +16,7 @@ def to_roman(int)
   return romans[0] << romans[1] if int % 5 == 4
   if (6...10).include?(int)
     romans[1] << (romans[0] * (int - 5))
+  elsif [9,0].include?(int)
+    10 - int == 1 ? romans[0] << romans[3] : romans[3]
   end
 end
