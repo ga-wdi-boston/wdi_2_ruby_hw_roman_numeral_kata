@@ -42,4 +42,12 @@ describe '#to_roman' do
 		expect(to_roman(44, numerals)).to eq 'XLIV'
 		expect(to_roman(99, numerals)).to eq 'XCIX'
 	end
+		it 'should return correct when passed 100+' do
+		expect(to_roman(100, numerals)).to eq 'C'
+		expect(to_roman(444, numerals)).to eq 'CDXLIV'
+		expect(to_roman(1000, numerals)).to eq 'M'
+		expect(to_roman(1667, numerals)).to eq 'MDCLXVII'
+		expect(to_roman(1900, numerals)).to eq 'MCM'
+		expect(to_roman(1999, numerals)).to eq 'MCMXCIX'
+	end
 end
