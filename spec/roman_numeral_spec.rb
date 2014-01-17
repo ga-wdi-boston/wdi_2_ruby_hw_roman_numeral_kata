@@ -51,6 +51,10 @@ describe 'to_arabic' do
 	it 'returns 7 if you input VII' do
 		expect(to_arabic('VII')).to eq 7
 	end
+	it 'returns 9 if you input IX' do
+		expect(to_arabic('IX')).to eq 9
+	end
+	
 end
 
 

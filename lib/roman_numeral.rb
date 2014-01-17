@@ -78,7 +78,7 @@ end
 
 def to_arabic(string)
 	int = 0
-	if string.length <= 3 && !(string.include?('V'))
+	if string.length <= 3 && !(string.include?('V')) && !(string.include?('X'))
 		i = string.length
 		while i >= 1
 			int += 1
@@ -95,6 +95,9 @@ def to_arabic(string)
 			int += 1
 			i -= 1
 		end
+		
+		elsif string == 'IX'
+			int = 9
 	end
 	int
 end
