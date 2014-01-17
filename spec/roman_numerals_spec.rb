@@ -54,5 +54,6 @@ describe '#to_arabic' do
 
   it 'returns the integer 1543 when passed roman numeral MDXLIII' do
     expect(to_arabic('MDXLIII')).to eq 1543
+    expect(to_arabic('MCCCIX')).to eq 1309
   end
 end

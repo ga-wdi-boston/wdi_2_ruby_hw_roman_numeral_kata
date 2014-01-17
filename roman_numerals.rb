@@ -23,7 +23,6 @@ def to_roman(number)
   answer
 end
 
-
 def to_arabic(string)
   conversion_chart = {
     "M" => 1000,
