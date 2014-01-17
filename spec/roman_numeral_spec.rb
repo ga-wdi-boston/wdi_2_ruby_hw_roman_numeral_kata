@@ -62,11 +62,12 @@ describe RomanNum do
       expect(RomanNum.new(91).to_arabic).to eq 91
       expect(RomanNum.new(101).to_arabic).to eq 101
 
-      # expect(RomanNum.new(424).to_arabic).to eq 'CDXXIV'
-      # expect(RomanNum.new(591).to_arabic).to eq 'DXCI'
-      # expect(RomanNum.new(909).to_arabic).to eq 'CMIX'
-      # expect(RomanNum.new(3494).to_arabic).to eq 'MMMCDXCIV'
-      # expect(RomanNum.new(4999).to_arabic).to eq 'MMMMCMXCIX'
+      expect(RomanNum.new(424).to_arabic).to eq 424
+      expect(RomanNum.new(909).to_arabic).to eq 909
+      expect(RomanNum.new(3494).to_arabic).to eq 3494
+      expect(RomanNum.new(4999).to_arabic).to eq 4999
+
+      # expect(RomanNum.new(591).to_arabic).to eq 591
     end
   end
 end
