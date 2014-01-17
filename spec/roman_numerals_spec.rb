@@ -45,11 +45,19 @@ describe '#to_arabic' do
 		expect{ to_arabic(10) }.to raise_error "Please enter a single string!"
 	end
 
-	it 'converts roman numerals that don\'t involve subtraction to arabic numbers' do
+	it 'converts roman numerals 1-3000 that don\'t involve subtraction to arabic numbers' do
 		expect(to_arabic("X")).to eq 10
 		expect(to_arabic("MMDC")).to eq 2600
 		expect(to_arabic("DCCXVIII")).to eq 718
 		expect(to_arabic("LXVII")).to eq 67
+	end
+
+	it 'converts roman numerals 1-3000 that do involve subtraction to arabic numbers' do
+		expect(to_arabic("IV")).to eq 4
+		expect(to_arabic("XXIX")).to eq 29
+		expect(to_arabic("CMLIX")).to eq 959
+		expect(to_arabic("MMCDXCIV")).to eq 2494
+		expect(to_arabic("MCMXCIX")).to eq 1999
 	end
 
 end

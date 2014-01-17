@@ -34,11 +34,55 @@ def to_roman(*num)
 
 end
 
+########################################33
+
 def to_arabic(*string)
 	raise "Please enter a single string!" unless string.length == 1 && string[0].is_a?(String)
 
-	# split input into an array of characters
-	@roman = string[0].split(//)
+	@full_roman = string[0]
+
+
+	# binding.pry
+
+	# create array first
+	integer_array = []
+
+	# if there are subtractions, put them into array, and delete them from original array
+	if @full_roman["IV"]
+		integer_array << 4
+		@full_roman.slice!("IV")
+	end
+	if @full_roman["IX"]
+		integer_array << 9
+		@full_roman.slice!("IX")
+	end
+	if @full_roman["XL"]
+		integer_array << 40
+		@full_roman.slice!("XL")
+	end
+	if @full_roman["XC"]
+		integer_array << 90
+		@full_roman.slice!("XC")
+	end
+	if @full_roman["CD"]
+		integer_array << 400
+		@full_roman.slice!("CD")
+	end
+	if @full_roman["CM"]
+		integer_array << 900
+		@full_roman.slice!("CM")
+	end
+
+	# binding.pry
+
+	# at this point:
+	# integer_array should contain any subtractive numbers [4,9,40,90,400,900]
+	# @full_roman should be a string containing the rest of the numerals, e.g. "XXXVII"
+
+	@full_roman_array = @full_roman.split(//)
+	# now i want to convert @full_roman to integers
+
+	# binding.pry
 
 	romans = {
 		1000 => "M",
@@ -56,9 +100,7 @@ def to_arabic(*string)
 		1 => "I"
 	}
 
-	integer_array = []
-
-	@roman.each do |numeral|
+	@full_roman_array.each do |numeral|
 		# find the value in the hash, print corresponding key
 		arabic_number = romans.key(numeral)
 		# append integer to array
@@ -69,26 +111,19 @@ def to_arabic(*string)
 	integer = integer_array.inject(0) {|sum, i|  sum + i }
 	integer
 
+	# binding.pry
+
 end
 
 binding.pry
 
 
 
-# convert 2, for example
-# @num = 2
-# numbers = []
-# first k = 10
-# 	is @num greater than or equal to k? no
-# 	do nothing, move on to next k
-# k = 9
-# 	is @num greater than or equal to k? no
-# 	do nothing, move on to next k
-# k = 5
-# k = 4
-# k = 1
-# 	is @num=2 greater than or equal to k=1? yes
-# 	write v="I" to numbers
-# 	numbers = ["I"]
-# 	redefine @num = @num-k = 2-1 = 1
-# 	uh oh... @num=1 so i want to repeat this process for k=1 again, but method moves on to the next key, i think?
+
+# Laure's answer... my typing is incomplete here
+# answer = 0
+# conversion_chart.each do |key, value|
+# 	while string.index(key).starts_with? == 0
+# 		answer += value
+# 		string.slice!(key)
+# 	end
