@@ -17,6 +17,8 @@ describe '#to_roman' do
 
   it 'tests that in Roman numeral format, V(5) plus III(3) equals VIII (8)' do
     expect(to_roman(8)).to eq "VIII"
+    expect(to_roman(12)).to eq "XII"
+    expect(to_roman(31)).to eq "XXXI"
   end
 end
 

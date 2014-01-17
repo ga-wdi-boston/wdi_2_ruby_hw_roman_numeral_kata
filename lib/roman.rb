@@ -6,6 +6,8 @@ def to_roman(num)
             5 => "V",
             9 => "IX",
             10 => "X",
+            20 => "XX",
+            30 => "XXX",
             40 => "XL",
             50 => "L",
             90 => "XC",
@@ -17,7 +19,7 @@ def to_roman(num)
 
   return roman[num] if roman.has_key?(num)
 
-  [[ 10, 1], [ 5, 1]].each do |key, difference|
+  [[30, 25], [20, 15],[ 10, 5], [ 5, 1]].each do |key, difference|
     while num > key
       key2 = num.to_i - key.to_i
       return roman[key].to_s << roman[key2].to_s
