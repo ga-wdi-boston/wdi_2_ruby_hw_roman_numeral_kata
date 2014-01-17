@@ -21,4 +21,11 @@ describe '#to_roman' do
     expect(to_roman(25)).to eq "XXV"
     expect(to_roman(38)).to eq "XXXVIII"
   end
+  it "should return appropriate String of stuff that needs L (1-88)" do
+    expect(to_roman(42)).to eq "XLII"
+    expect(to_roman(58)).to eq "LVIII"
+    expect(to_roman(65)).to eq "LXV"
+    expect(to_roman(79)).to eq "LXXIX"
+    expect(to_roman(88)).to eq "LXXXVIII"
+  end
 end
