@@ -30,6 +30,13 @@ describe '#to_roman' do
     expect(to_roman(29)).to eq 'XXIX'
     expect(to_roman(35)).to eq 'XXXV'
   end
+
+  it 'returns the correct roman numeral for int btwn 49, 101' do
+    expect(to_roman(49)).to eq 'XLIX'
+    expect(to_roman(50)).to eq 'L'
+    expect(to_roman(91)).to eq 'XCI'
+    expect(to_roman(101)).to eq 'CI'
+  end
 end
 
 
