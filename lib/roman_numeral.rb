@@ -1,3 +1,5 @@
+require 'pry'
+
 def to_roman(int)
 	roman = ''
 	if int <= 3
@@ -78,7 +80,7 @@ end
 
 def to_arabic(string)
 	int = 0
-	if string.length <= 3 && !(string.include?('V')) && !(string.include?('X'))
+	if !(string.include?('V')) && !(string.include?('X')) && !(string.include?('L'))
 		i = string.length
 		while i >= 1
 			int += 1
@@ -88,7 +90,7 @@ def to_arabic(string)
 	elsif string == 'IV'
 		int = 4
 	
-	elsif string.length <= 4 && !(string.include?('X'))
+	elsif !(string.include?('X')) && !(string.include?('L'))
 		i = string.length
 		int += 4
 		while i >= 1
@@ -96,8 +98,19 @@ def to_arabic(string)
 			i -= 1
 		end
 		
-		elsif string == 'IX'
+	elsif string == 'IX'
 			int = 9
+	elsif !(string.include?('L'))
+			string_rest = string.delete 'X'
+			string.slice!(string_rest)
+
+			i = string.length
+			while i >= 1
+				int += 1
+				i -= 1
+			end
+
+			int = int * 10 + to_arabic(string_rest)
 	end
 	int
 end
