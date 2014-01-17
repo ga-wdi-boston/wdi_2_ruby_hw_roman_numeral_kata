@@ -112,6 +112,12 @@ describe RomanNum do
       expect(RomanNum.new("MMMCMXCIX").to_i).to eq 3999
     end
   end
+  describe '#puts' do
+    it 'should return the string representation of the RomanNum instance' do
+      expect(RomanNum.new("XXX").to_s).to eq "XXX"
+      expect(RomanNum.new("DCLXXV").to_s).to eq "DCLXXV"
+    end
+  end
 end
 
 

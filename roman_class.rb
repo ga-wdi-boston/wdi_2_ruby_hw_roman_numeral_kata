@@ -43,4 +43,11 @@ class RomanNum
     end
     int
   end
+  def to_s
+    @roman_string
+  end
 end
+
+number = RomanNum.new("X")
+puts number # prints "X" to the screen
+puts number.to_i # Returns the integer 10
