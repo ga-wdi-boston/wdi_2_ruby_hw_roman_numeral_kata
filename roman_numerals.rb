@@ -1,3 +1,7 @@
 def to_roman(number)
-  'I'
+  if number == 1
+    'I'
+  else
+    'V'
+  end
 end
