@@ -6,9 +6,11 @@ def roman_numerals(number)
 
 	ones_integer = number[-1].to_i
 	tens_integer = number[-2].to_i
+	hundreds_integer = number[-3].to_i
 
 	ones_roman = ''
 	tens_roman = ''
+	hundreds_roman = ''
 
 	# Evalutes ones place in roman
 	if ones_integer <= 3
